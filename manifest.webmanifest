@@ -1,0 +1,31 @@
+{
+  "name": "MAISON — Daha Özenli Bir Hayat",
+  "short_name": "MAISON",
+  "description": "Dijital Kültür Evi",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#FAF7F2",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/maison-app-icon-192.png?v=2",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/maison-app-icon-512.png?v=2",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/maison-app-icon.png?v=2",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

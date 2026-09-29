@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MAISON">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#FAF7F2">
+  <title>MAISON — Daha Özenli Bir Hayat | Dijital Kültür Evi</title>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="manifest" href="/manifest.json?v=2">
+  
+  <!-- Apple Touch Icons (iOS Safari Add to Home Screen) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+  <link rel="apple-touch-icon" sizes="192x192" href="/maison-app-icon-192.png?v=2">
+  <link rel="apple-touch-icon" sizes="512x512" href="/maison-app-icon-512.png?v=2">
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png?v=2">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+  <link rel="shortcut icon" href="/favicon.ico?v=2">
+</head>
+<body>
+  <div class="studio-background"></div>
+
+  <!-- Studio Header -->
+  <header class="studio-header">
+    <div class="brand-section">
+      <div class="brand-logo">MAISON</div>
+      <div class="brand-tagline">DAHA ÖZENLİ BİR HAYAT</div>
+      <div class="brand-badge" id="screenBadge">Dijital Salon</div>
+    </div>
+
+    <div class="studio-tools">
+      <button class="tool-btn" id="btnToggleIosHome" title="Telefon Ana Ekranı ile MAISON Uygulaması Arasında Geçiş Yap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="2" width="14" height="20" rx="3" ry="3"></rect>
+          <line x1="12" y1="18" x2="12.01" y2="18"></line>
+        </svg>
+        <span id="iosHomeBtnText">Telefon Ana Ekranı</span>
+      </button>
+
+      <button class="tool-btn" id="btnToggleMode" title="Canlı Editoryal Deneyim ile Referans Görseller arasında geçiş yap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        <span id="modeText">Referans Görseller (33)</span>
+      </button>
+
+      <button class="tool-btn" id="btnReplaySplash" title="Açılış Animasyonunu İzle (2.5 sn)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span>Açılış Animasyonu</span>
+      </button>
+
+      <button class="tool-btn" id="btnTour" title="10 Adımlık Kültürel Akış Turu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span>Kültürel Akış Turu</span>
+      </button>
+
+      <button class="tool-btn" id="btnSound" title="Ses efektleri">
+        <svg id="soundIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <span>Ses Açık</span>
+      </button>
+
+      <button class="tool-btn" id="btnReset" title="Ana Sayfaya Dön">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+          <path d="M3 3v5h5"></path>
+        </svg>
+        <span>Sıfırla</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Studio Canvas -->
+  <main class="studio-canvas">
+    <div class="iphone-wrapper" id="iphoneWrapper">
+      <!-- Side Hardware Buttons -->
+      <div class="side-button btn-silent"></div>
+      <div class="side-button btn-volume-up"></div>
+      <div class="side-button btn-volume-down"></div>
+      <div class="side-button btn-power"></div>
+
+      <!-- iPhone Bezel & Case -->
+      <div class="iphone-case" id="iphoneCase">
+        <div class="screen-viewport" id="screenViewport">
+          
+          <!-- MAISON Opening Splash Screen (3s with quote & elegant reveal) -->
+          <div class="maison-splash-screen" id="maisonSplashScreen">
+            <div class="splash-content-wrap">
+              <div class="splash-logo-container">
+                <img src="/images/maison_app_logo.jpg" alt="MAISON" class="splash-logo-image" id="splashLogoImage">
+              </div>
+              <div class="splash-tagline" id="splashTagline">
+                güzel insanlar, güzel fikirlerle daha güzel bir dünyaya.
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Island -->
+          <div class="dynamic-island-container" id="dynamicIslandContainer">
+            <div class="dynamic-island" id="dynamicIsland">
+              <div class="di-left">
+                <div class="di-camera"></div>
+              </div>
+              <div class="di-content" id="diContent">
+                <div class="di-now-playing">
+                  <div class="di-cover">M</div>
+                  <div class="di-meta">
+                    <span class="di-track">Ambre • Nils Frahm</span>
+                    <span class="di-artist">Maison Moment</span>
+                  </div>
+                </div>
+                <div class="di-wave">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- iOS Status Bar -->
+          <div class="status-bar" id="statusBar">
+            <span class="status-time" id="statusClock">9:41</span>
+            <div class="status-icons">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="16" width="3" height="5" rx="1"></rect>
+                <rect x="7" y="12" width="3" height="9" rx="1"></rect>
+                <rect x="12" y="8" width="3" height="13" rx="1"></rect>
+                <rect x="17" y="4" width="3" height="17" rx="1"></rect>
+              </svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M12 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path>
+                <path d="M5 12.5a10.9 10.9 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M8.5 15.5a6 6 0 0 1 7 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              <svg viewBox="0 0 24 24" style="width: 20px;">
+                <rect x="2" y="7" width="18" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"></rect>
+                <rect x="4" y="9" width="12" height="6" rx="1.5"></rect>
+                <path d="M21 10v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Authentic iOS Home Screen (SpringBoard) -->
+          <div class="ios-home-screen" id="iosHomeScreen" style="display: none;">
+            <div class="ios-wallpaper"></div>
+            <div class="ios-home-content">
+              
+              <!-- iOS Top Clock & Date Widget Area -->
+              <div class="ios-time-widget">
+                <div class="ios-date-label" id="iosDateLabel">Pazar, 20 Eylül</div>
+                <div class="ios-clock-label" id="iosClockLabel">09:41</div>
+              </div>
+
+              <!-- MAISON Daily Inspiration Widget (iOS 4x2 Widget) -->
+              <div class="ios-maison-widget" id="iosMaisonWidget" title="Günün İlhamını Aç">
+                <div class="widget-bg">
+                  <img src="/images/editorial/slow_living_coffee_terrace.jpg" alt="Maison Widget">
+                  <div class="widget-overlay"></div>
+                </div>
+                <div class="widget-content">
+                  <div class="widget-header">
+                    <span class="widget-brand">MAISON</span>
+                    <span class="widget-tag">BUGÜNÜN İLHAMI</span>
+                  </div>
+                  <div class="widget-body">
+                    <div class="widget-title">Daha Yavaş, Daha Derin, Daha Sen.</div>
+                    <div class="widget-author">Deniz Kaya • 7 dk okuma</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- iOS App Grid (4 columns) -->
+              <div class="ios-app-grid">
+                <!-- MAISON App Icon -->
+                <div class="ios-app-item" id="appIconMaison">
+                  <div class="ios-app-icon maison-icon-bg">
+                    <img src="/maison-app-icon-192.png?v=2" alt="MAISON" class="maison-springboard-icon-img">
+                    <span class="ios-badge">1</span>
+                  </div>
+                  <span class="ios-app-name">MAISON</span>
+                </div>
+
+                <!-- Safari -->
+                <div class="ios-app-item" id="appIconSafari">
+                  <div class="ios-app-icon safari-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="30" height="30">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="#fff"></polygon>
+                    </svg>
+                  </div>
+                  <span class="ios-app-name">Safari</span>
+                </div>
+
+                <!-- Kitaplar (Books) -->
+                <div class="ios-app-item" id="appIconBooks">
+                  <div class="ios-app-icon books-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="28" height="28">
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="rgba(255,255,255,0.2)"></path>
+                    </svg>
+                  </div>
+                  <span class="ios-app-name">Kitaplar</span>
+                </div>
+
+                <!-- Fotoğraflar (Photos) -->
+                <div class="ios-app-item" id="appIconPhotos">
+                  <div class="ios-app-icon photos-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="28" height="28">
+                      <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5" fill="#fff"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                  </div>
+                  <span class="ios-app-name">Fotoğraflar</span>
+                </div>
+
+                <!-- Notlar (Notes) -->
+                <div class="ios-app-item" id="appIconNotes">
+                  <div class="ios-app-icon notes-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#443" stroke-width="1.8" width="28" height="28">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                    </svg>
+                  </div>
+                  <span class="ios-app-name">Notlar</span>
+                </div>
+
+                <!-- Podcasts -->
+                <div class="ios-app-item" id="appIconPodcasts">
+                  <div class="ios-app-icon podcast-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="28" height="28">
+                      <circle cx="12" cy="11" r="1"></circle>
+                      <path d="M11 17a1 1 0 0 1 2 0c0 .5-.34 3-.5 4.5a.5.5 0 0 1-1 0c-.16-1.5-.5-4-.5-4.5z"></path>
+                      <path d="M8 8a5.8 5.8 0 0 1 8 0"></path>
+                      <path d="M5.5 5.5a9.4 9.4 0 0 1 13 0"></path>
+                    </svg>
+                  </div>
+                  <span class="ios-app-name">Podcasts</span>
+                </div>
+
+                <!-- Kamera (Camera) -->
+                <div class="ios-app-item" id="appIconCamera">
+                  <div class="ios-app-icon camera-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="28" height="28">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                      <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                  </div>
+                  <span class="ios-app-name">Kamera</span>
+                </div>
+
+                <!-- Ayarlar (Settings) -->
+                <div class="ios-app-item" id="appIconSettings">
+                  <div class="ios-app-icon settings-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="28" height="28">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                  <span class="ios-app-name">Ayarlar</span>
+                </div>
+              </div>
+
+              <!-- iOS Dock (Glassmorphic bottom dock) -->
+              <div class="ios-dock">
+                <div class="ios-dock-item" id="dockPhone">
+                  <div class="ios-app-icon phone-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="#fff" width="26" height="26">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="ios-dock-item" id="dockMessages">
+                  <div class="ios-app-icon messages-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="#fff" width="26" height="26">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="ios-dock-item" id="dockSafari">
+                  <div class="ios-app-icon safari-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="26" height="26">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="#fff"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div class="ios-dock-item" id="dockMusic">
+                  <div class="ios-app-icon music-icon-bg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" width="26" height="26">
+                      <circle cx="5.5" cy="17.5" r="2.5" fill="#fff"></circle>
+                      <circle cx="17.5" cy="15.5" r="2.5" fill="#fff"></circle>
+                      <path d="M8 17V5l12-2v12"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Main App Scrollable Body (Dynamic Editorial Engine) -->
+          <div class="app-screen-body" id="appScreenBody">
+            <!-- Dynamic components rendered here via JavaScript -->
+          </div>
+
+          <!-- Reference Images Mode Container -->
+          <div class="screens-container" id="referenceScreensContainer" style="display: none;">
+            <!-- Reference screens rendered here when reference mode is active -->
+          </div>
+
+          <!-- Maison Bottom Navigation (Article 10) -->
+          <nav class="maison-bottom-nav" id="maisonBottomNav">
+            <div class="nav-item active" data-tab="home" data-view="home" id="navHome">
+              <div class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+              </div>
+              <span class="nav-label">Ana Sayfa</span>
+            </div>
+
+            <div class="nav-item" data-tab="explore" data-view="explore" id="navExplore">
+              <div class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                </svg>
+              </div>
+              <span class="nav-label">Keşfet</span>
+            </div>
+
+            <!-- Central 'M' Button (Article 10: Personal Discovery Hub) -->
+            <div class="nav-m-button" id="navMButton" title="MAISON Keşif Merkezi">M</div>
+
+            <div class="nav-item" data-tab="salon" data-view="salon" id="navSalon">
+              <div class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="nav-label">Salon</span>
+            </div>
+
+            <div class="nav-item" data-tab="profile" data-view="profile" id="navProfile">
+              <div class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <span class="nav-label">Profil</span>
+            </div>
+          </nav>
+
+          <!-- Home Indicator -->
+          <div class="home-indicator" id="homeIndicator" title="Ana Sayfaya Dön"></div>
+
+          <!-- M Discovery Hub Modal (Article 10 Overhaul) -->
+          <div class="m-hub-modal" id="mHubModal">
+            <div class="m-hub-sheet" id="mHubSheet">
+              <!-- Sheet Handle -->
+              <div class="m-sheet-handle-wrap" id="mSheetHandle">
+                <div class="m-sheet-handle"></div>
+              </div>
+
+              <!-- Header: Serene M and Invitation -->
+              <div class="m-portal-header">
+                <div class="m-portal-monogram">M</div>
+                <h3 class="m-portal-title" id="mPortalTitle">Dünyanı biraz daha genişlet.</h3>
+                <p class="m-portal-subtitle" id="mPortalSubtitle">Berke, bu akşam kimlerle temas etmek istersin?</p>
+              </div>
+
+              <!-- Hızlı Niyet Çipleri -->
+              <div class="m-intentions-wrap">
+                <div class="m-intentions-bar" id="mIntentionsBar">
+                  <button class="m-intention-chip" data-action="studio">🎥 MAISON Studio</button>
+                  <button class="m-intention-chip" data-action="moment">⏳ 5 dakika ayır</button>
+                  <button class="m-intention-chip" data-action="oku">📖 Bir şey oku</button>
+                  <button class="m-intention-chip" data-action="tanis">🤝 Yeni biriyle tanış</button>
+                  <button class="m-intention-chip" data-action="kesfet">💡 Bir fikir keşfet</button>
+                  <button class="m-intention-chip" data-action="salon">💬 Salon'a gir</button>
+                  <button class="m-intention-chip" data-action="koleksiyon">🔖 Koleksiyon oluştur</button>
+                  <button class="m-intention-chip" data-action="journal">✍️ Journal yaz</button>
+                  <button class="m-intention-chip" data-action="surpriz">✨ Beni şaşırt</button>
+                </div>
+              </div>
+
+              <!-- MAISON STUDIO in M Menu (Special Visual Showcase) -->
+              <div class="m-studio-banner" id="mStudioBanner" title="MAISON Studio'yu Aç">
+                <div class="m-studio-banner-media">
+                  <img src="/images/editorial/studio_yoga_morning.jpg" alt="MAISON Studio">
+                  <div class="m-studio-play-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                </div>
+                <div class="m-studio-banner-content">
+                  <div class="m-studio-tag">ÖZEL YAYIN ALANI</div>
+                  <div class="m-studio-title">MAISON STUDIO</div>
+                  <div class="m-studio-desc">Kısa filmler, küçük pratikler ve iyi yaşama dair fikirler.</div>
+                </div>
+                <div class="m-studio-arrow">→</div>
+              </div>
+
+              <!-- 0b. MAISON AI Quick Entry Banner -->
+              <div class="m-ai-entry-banner" id="btnMHubToAI">
+                <div class="m-ai-entry-left">
+                  <div class="m-ai-entry-badge">KİŞİSEL KÜRASYON</div>
+                  <div class="m-ai-entry-title">MAISON AI ile Keşfet</div>
+                  <div class="m-ai-entry-sub">Zevklerinize ve günün ritmine göre size özel kültürel keşifler.</div>
+                </div>
+                <button class="m-ai-entry-btn">Sor →</button>
+              </div>
+
+              <!-- 1. Şu An MAISON'da (Canlı Nabız) -->
+              <div class="m-section" id="mSectionLive">
+                <div class="m-section-header">
+                  <div class="m-section-title-wrap">
+                    <span class="m-pulse-dot"></span>
+                    <span class="m-section-title">Şu An MAISON'da</span>
+                  </div>
+                  <span class="m-section-sub">Canlı Nabız</span>
+                </div>
+                <div class="m-live-scroll" id="mLiveScroll">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+              <!-- 2. Birini Tanı & MAISON Match -->
+              <div class="m-section" id="mSectionDuo">
+                <div class="m-featured-duo" id="mFeaturedDuo">
+                  <!-- Rendered dynamically (Daily match & Maison match) -->
+                </div>
+              </div>
+
+              <!-- 3. İnsanları Keşfet -->
+              <div class="m-section" id="mSectionPeople">
+                <div class="m-section-header">
+                  <div class="m-section-title-wrap">
+                    <span class="m-section-title">İnsanları Keşfet</span>
+                  </div>
+                  <span class="m-section-sub">Kültürel Eşleşmeler</span>
+                </div>
+                <div class="m-people-list" id="mPeopleList">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+              <!-- 4. MAISON Çevreleri (Circles) -->
+              <div class="m-section" id="mSectionCircles">
+                <div class="m-section-header">
+                  <div class="m-section-title-wrap">
+                    <span class="m-section-title">MAISON Çevreleri</span>
+                  </div>
+                  <span class="m-section-sub">8 Özel Çevre</span>
+                </div>
+                <div class="m-circles-grid" id="mCirclesGrid">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+              <!-- 5. Beni Şaşırt (Serendipity) -->
+              <div class="m-section" id="mSectionSurprise">
+                <div class="m-section-header">
+                  <div class="m-section-title-wrap">
+                    <span class="m-section-title">Beni Şaşırt</span>
+                  </div>
+                  <span class="m-section-sub">Beklenmedik Keşif</span>
+                </div>
+                <div id="mSurpriseContainer">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+              <!-- 6. Ortak Koleksiyonlar -->
+              <div class="m-section" id="mSectionCollab">
+                <div class="m-section-header">
+                  <div class="m-section-title-wrap">
+                    <span class="m-section-title">Ortak Koleksiyonlar</span>
+                  </div>
+                  <span class="m-section-sub">Birlikte Arşiv</span>
+                </div>
+                <div class="m-collab-list" id="mCollabList">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+              <!-- 7. Sana Gelen Davetler -->
+              <div class="m-section" id="mSectionInvites">
+                <div class="m-section-header">
+                  <div class="m-section-title-wrap">
+                    <span class="m-section-title">Sana Gelen Davetler</span>
+                  </div>
+                  <span class="m-section-sub" id="mInvitesCount">3 Yeni Davet</span>
+                </div>
+                <div class="m-invitations-list" id="mInvitationsList">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+              <!-- 8. Senin Dünyan (Kişisel Kısayollar) -->
+              <div class="m-section" id="mSectionUniverse">
+                <div class="m-section-header">
+                  <div class="m-section-title-wrap">
+                    <span class="m-section-title">Senin Dünyan</span>
+                  </div>
+                  <span class="m-section-sub">Kişisel Evren</span>
+                </div>
+                <div class="m-universe-grid" id="mUniverseGrid">
+                  <div class="m-universe-item" data-action="collections">
+                    <div class="m-universe-icon">🔖</div>
+                    <div class="m-universe-num">5</div>
+                    <div class="m-universe-label">Koleksiyonlarım</div>
+                  </div>
+                  <div class="m-universe-item" data-action="saved">
+                    <div class="m-universe-icon">⭐</div>
+                    <div class="m-universe-num">38</div>
+                    <div class="m-universe-label">Kaydettiklerim</div>
+                  </div>
+                  <div class="m-universe-item" data-action="reads">
+                    <div class="m-universe-icon">📖</div>
+                    <div class="m-universe-num">3</div>
+                    <div class="m-universe-label">Okuduklarım</div>
+                  </div>
+                  <div class="m-universe-item" data-action="journal">
+                    <div class="m-universe-icon">✍️</div>
+                    <div class="m-universe-num">7</div>
+                    <div class="m-universe-label">Journal</div>
+                  </div>
+                  <div class="m-universe-item" data-action="salons">
+                    <div class="m-universe-icon">💬</div>
+                    <div class="m-universe-num">3</div>
+                    <div class="m-universe-label">Katıldığım Salon</div>
+                  </div>
+                  <div class="m-universe-item" data-action="taste">
+                    <div class="m-universe-icon">🧭</div>
+                    <div class="m-universe-num">%96</div>
+                    <div class="m-universe-label">Zevk Profili</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Close button -->
+              <div class="m-portal-close-bar">
+                <button class="m-portal-close-btn" id="btnCloseMHub">Kapat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Global Search Modal (Article 28) -->
+          <div class="search-modal" id="searchModal">
+            <div class="search-bar-header">
+              <div class="search-input-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="#8C8073">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="globalSearchInput" placeholder="Yazı, yazar, mekan, kitap, sanat ara (örn: İstanbul)...">
+              </div>
+              <button class="search-cancel-btn" id="btnCloseSearch">İptal</button>
+            </div>
+            <div class="search-results-area" id="searchResultsArea"></div>
+          </div>
+
+          <!-- 1. Notification Center Modal -->
+          <div class="notification-modal" id="notificationCenterModal">
+            <div class="notification-sheet" id="notificationSheet">
+              <div class="notif-sheet-header">
+                <div class="notif-header-title-row">
+                  <h3 class="notif-sheet-title">Bildirimler</h3>
+                  <span class="notif-badge-count" id="notifBadgeCount">3 Yeni</span>
+                </div>
+                <button class="notif-close-btn" id="btnCloseNotificationCenter">&times;</button>
+              </div>
+
+              <!-- Instant Notification Simulator -->
+              <div class="notif-instant-bar">
+                <button class="notif-instant-btn" id="btnTriggerInstantNotif">
+                  <span>⚡</span>
+                  <span>Anlık Bildirim Gönder / Simüle Et</span>
+                </button>
+              </div>
+
+              <!-- Filter Tabs -->
+              <div class="notif-filter-tabs" id="notifFilterTabs">
+                <button class="notif-tab-btn active" data-notif-filter="all">Tümü</button>
+                <button class="notif-tab-btn" data-notif-filter="cultural">Kültürel</button>
+                <button class="notif-tab-btn" data-notif-filter="invitation">Davetler</button>
+                <button class="notif-tab-btn" data-notif-filter="interaction">Etkileşim</button>
+              </div>
+
+              <!-- Notification Items List -->
+              <div class="notif-items-list" id="notifItemsList"></div>
+            </div>
+          </div>
+
+          <!-- 2. Taslak Seyahat Planı Modal -->
+          <div class="travel-plan-modal" id="travelPlanModal">
+            <div class="travel-plan-sheet" id="travelPlanSheet">
+              <div class="travel-plan-handle" id="travelPlanHandle"></div>
+              <div class="travel-plan-header">
+                <div class="travel-plan-badge">MAISON SEYAHAT TASLAĞI</div>
+                <h2 class="travel-plan-title" id="travelPlanTitle">Floransa & Toskana</h2>
+                <p class="travel-plan-subtitle" id="travelPlanSubtitle">4 Günlük Yavaş Seyahat & Zanaat Rotası</p>
+                <button class="travel-plan-close-btn" id="btnCloseTravelPlan">&times;</button>
+              </div>
+              <div class="travel-plan-content" id="travelPlanContent"></div>
+              <div class="travel-plan-footer">
+                <button class="travel-plan-btn-primary" id="btnSaveTravelPlan">Ajandama Kaydet</button>
+                <button class="travel-plan-btn-secondary" id="btnShareTravelPlan">Rotayı Paylaş</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. MAISON Çevrem Modal -->
+          <div class="maison-circles-modal" id="maisonCirclesModal">
+            <div class="maison-circles-sheet" id="maisonCirclesSheet">
+              <div class="circles-sheet-header">
+                <div>
+                  <h3 class="circles-sheet-title">MAISON Çevrem</h3>
+                  <p class="circles-sheet-sub" id="circlesSheetSub">Katıldığın ve takip ettiğin kültürel çevreler</p>
+                </div>
+                <button class="circles-close-btn" id="btnCloseMaisonCircles">&times;</button>
+              </div>
+              <div class="joined-circles-list" id="joinedCirclesList"></div>
+            </div>
+          </div>
+
+          <!-- 4. Ortak Koleksiyon Modal -->
+          <div class="collab-modal" id="collabCollectionModal">
+            <div class="collab-sheet" id="collabCollectionSheet">
+              <div class="collab-header">
+                <div class="collab-badge">ORTAK KOLEKSİYON</div>
+                <h2 class="collab-title" id="collabTitle">Boğaz Kıyıları</h2>
+                <p class="collab-subtitle" id="collabSubtitle">Sen + Mert Kaya • 3 Kayıt</p>
+                <button class="collab-close-btn" id="btnCloseCollabCollection">&times;</button>
+              </div>
+              <div class="collab-items-list" id="collabItemsList"></div>
+              <div class="collab-action-bar">
+                <button class="collab-btn-add" id="btnAddCollabItem">+ Ortak Kayıt Ekle</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4b. Yeni Ortak Kayıt Ekle Modal -->
+          <div class="collab-add-modal" id="addCollabItemModal" style="display: none;">
+            <div class="collab-add-sheet">
+              <div class="collab-add-header">
+                <div>
+                  <div class="collab-badge">YENİ KAYIT</div>
+                  <h3 style="font-family: var(--font-serif); font-size: 18px; margin: 2px 0 0 0; color: var(--maison-charcoal);">Ortak Koleksiyona Ekle</h3>
+                </div>
+                <button class="collab-close-btn" id="btnCloseAddCollabItem">&times;</button>
+              </div>
+              <div style="padding: 16px 20px;">
+                <label style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--maison-muted-brown); display: block; margin-bottom: 6px;">Başlık / Mekan / Eser</label>
+                <input type="text" id="collabItemTitleInput" placeholder="Örn: Kuzguncuk Çınaraltı Notları" style="width: 100%; padding: 12px; border: 1px solid var(--maison-border); border-radius: 10px; margin-bottom: 14px; background: var(--maison-cream); color: var(--maison-charcoal);">
+                
+                <label style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--maison-muted-brown); display: block; margin-bottom: 6px;">Kişisel Not veya Alıntı</label>
+                <textarea id="collabItemNoteInput" placeholder="Neden burayı veya bu eseri ekliyorsunuz?" style="width: 100%; height: 80px; padding: 12px; border: 1px solid var(--maison-border); border-radius: 10px; margin-bottom: 16px; background: var(--maison-cream); resize: none; color: var(--maison-charcoal);"></textarea>
+
+                <button class="modal-primary-btn" id="btnSubmitCollabItem" style="width: 100%; justify-content: center; padding: 12px;">Koleksiyona Kaydet</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4c. MAISON Bağlantı / Kültürel Profil Modalı -->
+          <div class="maison-connection-modal" id="maisonConnectionModal" style="display: none;">
+            <div class="connection-modal-sheet">
+              <div class="connection-modal-header">
+                <span class="connection-modal-badge">KÜLTÜREL BAĞLANTI</span>
+                <button class="connection-modal-close" id="btnCloseConnectionModal">&times;</button>
+              </div>
+              <div class="connection-modal-body" id="connectionModalBody">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Makale Yorumlar Modal -->
+          <div class="comments-modal" id="articleCommentsModal">
+            <div class="comments-sheet" id="articleCommentsSheet">
+              <div class="comments-header">
+                <h3 class="comments-title" id="commentsSheetTitle">Düşünceler & Yorumlar</h3>
+                <button class="comments-close-btn" id="btnCloseArticleComments">&times;</button>
+              </div>
+              <div class="comments-list" id="articleCommentsList"></div>
+              <div class="comment-input-wrap">
+                <input type="text" id="newCommentInput" placeholder="Bu yazıya dair düşüncenizi paylaşın...">
+                <button class="comment-send-btn" id="btnSendComment">Paylaş</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. MAISON Studio Koleksiyona Ekle Modal -->
+          <div class="studio-collab-modal" id="studioCollectionModal">
+            <div class="studio-collab-sheet" id="studioCollectionSheet">
+              <div class="studio-collab-header">
+                <div>
+                  <div class="collab-badge">KOLEKSİYONA EKLE</div>
+                  <h3 class="collab-title" id="studioModalVideoTitle">Pratiği Koleksiyonuna Ekle</h3>
+                  <p class="collab-subtitle">Bu video içeriğini hangi kişisel koleksiyonuna eklemek istersin?</p>
+                </div>
+                <button class="collab-close-btn" id="btnCloseStudioCollection">&times;</button>
+              </div>
+              <div class="studio-collections-options" id="studioCollectionsOptions"></div>
+              <div class="studio-new-collab-input">
+                <input type="text" id="newStudioCollectionInput" placeholder="Veya yeni koleksiyon adı yazın...">
+                <button class="studio-add-collab-btn" id="btnCreateAndAddToCollection">Ekle</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. MAISON First-Time Editorial Onboarding Modal -->
+          <div class="maison-onboarding-modal" id="maisonOnboardingModal" style="display: none;">
+            <div class="onboarding-sheet">
+              <div class="onboarding-brand-mark">M</div>
+              <div class="onboarding-tagline" id="onboardingTagline">DAHA ÖZENLİ BİR HAYAT</div>
+              <h2 class="onboarding-title" id="onboardingTitle">MAISON'ı sizin için biraz daha kişisel hale getirelim.</h2>
+              <p class="onboarding-question" id="onboardingQuestion">Neler ilginizi çekiyor?</p>
+              <p class="onboarding-desc" id="onboardingDesc">Seçtiğiniz ilgi alanları editoryal akışınızı ve keşiflerinizi zenginleştirecek.</p>
+              
+              <div class="onboarding-chips-grid" id="onboardingChipsGrid"></div>
+
+              <div class="onboarding-footer">
+                <button class="onboarding-btn-submit" id="btnCompleteOnboarding">MAISON'ı keşfetmeye başla →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Bu Akşam MAISON'da (Evening Dispatch Modal) -->
+          <div class="maison-evening-modal" id="maisonEveningModal" style="display: none;">
+            <div class="evening-sheet">
+              <div class="evening-header">
+                <div>
+                  <div class="evening-badge">AKŞAM BÜLTENİ</div>
+                  <h3 class="evening-title" id="eveningModalTitle">Bu Akşam MAISON'da</h3>
+                  <p class="evening-subtitle" id="eveningModalSub">Günün sakinleşme ve ilham seçkisi.</p>
+                </div>
+                <button class="evening-close-btn" id="btnCloseEveningModal">&times;</button>
+              </div>
+              <div class="evening-content-list" id="eveningContentList"></div>
+            </div>
+          </div>
+
+          <!-- 9. Account & Auth Modal (Apple Guideline 4.8) -->
+          <div class="maison-auth-modal" id="maisonAuthModal">
+            <div class="auth-sheet">
+              <div style="padding: 20px 20px 10px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--maison-border);">
+                <div>
+                  <div style="font-size: 10px; letter-spacing: 2px; color: var(--maison-gold); font-weight: 700;">HESAP & GİRİŞ</div>
+                  <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--maison-charcoal); margin: 2px 0 0 0;">MAISON'a Giriş Yap</h3>
+                </div>
+                <button class="evening-close-btn" id="btnCloseAuthModal">&times;</button>
+              </div>
+              <div style="padding: 20px;">
+                <p style="font-size: 12.5px; color: var(--maison-taupe); line-height: 1.45; margin: 0 0 16px 0;">Kişisel zevk arşiviniz, koleksiyonlarınız ve okuma tercihleriniz cihazlarınız arasında güvenle eşitlenir.</p>
+                
+                <!-- Sign in with Apple (Official Apple Guideline 4.8) -->
+                <button class="apple-sign-in-btn" id="btnAppleSignIn">
+                  <svg width="17" height="20" viewBox="0 0 17 20" fill="currentColor">
+                    <path d="M15.22 15.06c-.42.94-.92 1.79-1.52 2.55-.8 1.03-1.63 1.55-2.51 1.58-.7.03-1.54-.36-2.52-.36-.98 0-1.87.36-2.53.36-.88-.03-1.76-.58-2.62-1.64-1.2-1.46-2.14-3.66-2.14-5.96 0-3.68 2.39-5.63 4.74-5.63 1.25 0 2.29.83 3.08.83.76 0 1.95-.88 3.39-.88.58 0 2.25.06 3.42 1.77-3.03 1.6-2.53 5.48.49 6.95zM11.66 3.73c.62-.76 1.05-1.8 1.05-2.85 0-.15-.02-.3-.04-.42-.98.04-2.14.65-2.82 1.44-.55.63-.99 1.63-.99 2.68 0 .15.03.3.05.37.11.02.26.04.38.04.88 0 1.8-.52 2.37-1.26z"/>
+                  </svg>
+                  <span>Apple ile Giriş Yap</span>
+                </button>
+
+                <!-- Google Sign In -->
+                <button class="google-sign-in-btn" id="btnGoogleSignIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                    <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/>
+                    <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.17 0 9.97 0 12s.45 3.83 1.25 5.42l4.03-3.15z"/>
+                    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                  </svg>
+                  <span>Google ile Devam Et</span>
+                </button>
+
+                <div style="text-align: center; margin: 18px 0; font-size: 11px; color: var(--maison-taupe); position: relative;">
+                  <span style="background: var(--maison-ivory); padding: 0 10px; position: relative; z-index: 1;">veya e-posta ile</span>
+                  <div style="position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--maison-border);"></div>
+                </div>
+
+                <input type="email" id="authEmailInput" placeholder="ornek@maison.life" style="width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid var(--maison-border); border-radius: 10px; background: var(--maison-white); margin-bottom: 12px; font-size: 14px; color: var(--maison-charcoal);">
+                <button class="modal-primary-btn" id="btnEmailSignIn" style="background: var(--maison-charcoal); color: var(--maison-ivory); width: 100%; padding: 12px; font-size: 14px; font-weight: 600;">E-posta ile Bağlan</button>
+
+                <div style="font-size: 10.5px; color: var(--maison-taupe); text-align: center; margin-top: 14px; line-height: 1.4;">
+                  Devam ederek <span id="linkAuthTerms" style="text-decoration: underline; cursor: pointer;">Kullanım Koşulları</span> ve <span id="linkAuthPrivacy" style="text-decoration: underline; cursor: pointer;">Gizlilik Politikası</span>'nı onaylamış olursunuz.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Account Deletion Confirmation Modal (Apple Guideline 5.1.1) -->
+          <div class="maison-delete-account-modal" id="maisonDeleteAccountModal">
+            <div class="delete-account-sheet">
+              <div style="padding: 22px 20px 14px; text-align: center;">
+                <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(181, 67, 60, 0.12); color: #B5433C; font-size: 24px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 12px;">⚠️</div>
+                <h3 style="font-family: var(--font-serif); font-size: 21px; font-weight: 600; color: var(--maison-charcoal); margin: 0 0 8px 0;">Hesabınızı Silmek İstediğinizden Emin Misiniz?</h3>
+                <p style="font-size: 13px; color: var(--maison-muted-brown); line-height: 1.5; margin: 0 0 18px 0;">
+                  Apple App Store ve KVKK/GDPR gereğince bu işlem <strong>geri alınamaz</strong>. MAISON üzerindeki kayıtlı tüm koleksiyonlarınız, Zevk Radarı verileriniz, Kültür Pasaportu mühürleriniz ve Journal notlarınız kalıcı olarak silinecektir.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                  <button class="btn-delete-account-trigger" id="btnConfirmDeleteAccount" style="background: #B5433C; color: #FFFFFF; border-color: #B5433C; padding: 14px; font-size: 13px;">
+                    Evet, Hesabımı ve Tüm Verilerimi Kalıcı Olarak Sil
+                  </button>
+                  <button class="modal-primary-btn" id="btnCancelDeleteAccount" style="background: var(--maison-cream); color: var(--maison-charcoal); border: 1px solid var(--maison-border); padding: 12px; font-size: 13px;">
+                    Vazgeç
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Quote Capture & Cross-System Synergy Action Sheet -->
+          <div class="quote-action-sheet-modal" id="quoteActionSheet">
+            <div class="quote-action-sheet">
+              <div style="padding: 18px 20px 12px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--maison-border);">
+                <div>
+                  <div style="font-size: 10px; letter-spacing: 1.5px; color: var(--accent-terracotta, #B5734C); font-weight: 700;">ÇAPRAZ SİNERJİ</div>
+                  <h3 style="font-family: var(--font-serif); font-size: 19px; font-weight: 600; color: var(--maison-charcoal); margin: 2px 0 0 0;">Alıntıyı Kültürel Dünyana Bağla</h3>
+                </div>
+                <button class="evening-close-btn" id="btnCloseQuoteSheet">&times;</button>
+              </div>
+              <div class="quote-sheet-preview">
+                <div class="quote-sheet-text" id="quoteSheetText">“Daha yavaş yaşadığımızda, yaşadığımızın daha fazlasını hissederiz.”</div>
+                <div class="quote-sheet-source" id="quoteSheetSource">— Deniz Kaya • Yavaş Yaşamak</div>
+              </div>
+              <div class="synergy-action-list">
+                <div class="synergy-action-card" id="actSaveToJournal">
+                  <div class="synergy-icon">✍️</div>
+                  <div>
+                    <div class="synergy-title">Journal'a Düşünce Olarak Kaydet</div>
+                    <div class="synergy-desc">Bu alıntıyı kişisel günlüğüne aktarır, günün hissiyle birleştirir.</div>
+                  </div>
+                </div>
+                <div class="synergy-action-card" id="actSaveToCollection">
+                  <div class="synergy-icon">🔖</div>
+                  <div>
+                    <div class="synergy-title">Koleksiyonlarıma Ekle</div>
+                    <div class="synergy-desc">Özel seçkilerine veya ortak Boğaz/Amalfi koleksiyonuna iliştirir.</div>
+                  </div>
+                </div>
+                <div class="synergy-action-card" id="actDiscussInSalon">
+                  <div class="synergy-icon">🏛️</div>
+                  <div>
+                    <div class="synergy-title">Bu Alıntıyı Salonda Tartış</div>
+                    <div class="synergy-desc">İlgili Salon odasında yeni bir düşünce başlığı başlatır.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Legal & Privacy Modal (KVKK / GDPR / App Store) -->
+          <div class="maison-legal-modal" id="maisonLegalModal">
+            <div class="legal-sheet">
+              <div style="padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--maison-border);">
+                <div>
+                  <div style="font-size: 10px; letter-spacing: 2px; color: var(--maison-gold); font-weight: 700;">HUKUKİ ŞEFFAFLIK</div>
+                  <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--maison-charcoal); margin: 2px 0 0 0;" id="legalModalTitle">Gizlilik Politikası</h3>
+                </div>
+                <button class="evening-close-btn" id="btnCloseLegalModal">&times;</button>
+              </div>
+              <div style="padding: 16px 20px 24px 20px; overflow-y: auto; max-height: 60vh; font-size: 12.5px; line-height: 1.6; color: var(--maison-charcoal);" id="legalModalBody">
+                <p><strong>Son Güncelleme: 29 Eylül 2026</strong></p>
+                <p>MAISON ("Uygulama"), kullanıcılarının dijital mahremiyetine ve kişisel zevk verilerine en yüksek saygıyı duyar. Apple App Store ve Google Play Store veri güvenliği ilkelerine tam uyumlu olarak çalışır.</p>
+                <h4 style="margin: 14px 0 4px 0; font-family: var(--font-serif); font-size: 16px;">1. Toplanan Veriler</h4>
+                <p>Uygulamada seçtiğiniz kültürel ilgi alanları, okuma geçmişi ve kaydettiğiniz koleksiyonlar yalnızca size özel bir akış sunmak amacıyla kullanılır. Reklam hedeflemesi veya üçüncü taraf veri satışı asla yapılmaz.</p>
+                <h4 style="margin: 14px 0 4px 0; font-family: var(--font-serif); font-size: 16px;">2. Apple & Google Hesap Entegrasyonu</h4>
+                <p>Giriş yaparken sağlanan kimlik bilgileri şifrelenmiş oturum jetonlarıyla korunur. Apple Sign-In "Hide My Email" özelliği tam desteklenir.</p>
+                <h4 style="margin: 14px 0 4px 0; font-family: var(--font-serif); font-size: 16px;">3. Hesap ve Veri Silme Hakkı (Apple Guideline 5.1.1)</h4>
+                <p>Kullanıcılar diledikleri an Ayarlar menüsü altından hesaplarını ve tüm kayıtlı verilerini anında ve kalıcı olarak silebilirler.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAISON Kültürel Tanışma & Bağlantı Talebi Modalı -->
+          <div class="maison-connect-modal" id="maisonConnectModal">
+            <div class="evening-modal-overlay" id="overlayConnectModal"></div>
+            <div class="evening-modal-card connect-modal-card" style="max-width: 440px;">
+              <div class="evening-modal-header">
+                <div>
+                  <div style="font-size: 10px; letter-spacing: 2px; color: var(--maison-gold); font-weight: 700; text-transform: uppercase;">KÜLTÜREL TANIŞMA • SEÇKİN ÇEVRE</div>
+                  <h3 style="font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--maison-charcoal); margin: 2px 0 0 0;" id="connectModalTitle">Küratörle Bağlantı Kur</h3>
+                </div>
+                <button class="evening-close-btn" id="btnCloseConnectModal">&times;</button>
+              </div>
+              <div class="connect-modal-body" id="connectModalBody">
+                <!-- Rendered dynamically: Target curator header, taste score %, mutual topics, note editor, icebreaker chips -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Full-Screen Instagram-Style Story Viewer Modal -->
+          <div class="story-viewer-modal" id="maisonStoryModal">
+            <div class="story-viewer-progress-bar">
+              <div class="story-viewer-progress-fill" id="storyProgressFill"></div>
+            </div>
+            <div class="story-viewer-header">
+              <div class="story-curator-info" id="storyCuratorInfo">
+                <img src="/images/editorial/architect_selin.jpg" alt="Avatar" class="story-viewer-avatar" id="storyAvatar">
+                <div>
+                  <div class="story-viewer-name" id="storyName">Selin Arslan</div>
+                  <div class="story-viewer-time" id="storyTime">2 saat önce</div>
+                </div>
+              </div>
+              <button class="story-viewer-close" id="btnCloseStoryModal">&times;</button>
+            </div>
+            <div class="story-viewer-media-container" id="storyMediaContainer">
+              <img src="" alt="Story Visual" class="story-viewer-media" id="storyImage">
+              <div class="story-viewer-caption-box">
+                <div class="story-viewer-caption" id="storyCaption"></div>
+              </div>
+              <div class="story-touch-zone left" id="storyTouchLeft"></div>
+              <div class="story-touch-zone right" id="storyTouchRight"></div>
+            </div>
+            <div class="story-viewer-footer">
+              <input type="text" class="story-reply-input" id="storyReplyInput" placeholder="Küratöre düşünce yaz...">
+              <button class="story-like-btn" id="btnStoryLike" title="Beğen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <button class="story-connect-quick-btn" id="btnStoryQuickConnect">Tanış</button>
+            </div>
+          </div>
+
+          <!-- Instagram-Style Post Detail Modal -->
+          <div class="maison-post-modal" id="maisonPostModal">
+            <div class="evening-modal-overlay" id="overlayPostModal"></div>
+            <div class="evening-modal-card post-modal-card" style="max-width: 440px; padding: 0; overflow: hidden;">
+              <div class="post-modal-header" id="postModalHeader">
+                <!-- Rendered dynamically -->
+              </div>
+              <div class="post-modal-media-wrap">
+                <img src="" alt="Post Visual" id="postModalImage" class="post-modal-image">
+                <div class="post-heart-anim" id="postHeartAnim">❤️</div>
+              </div>
+              <div class="post-modal-content" id="postModalContent">
+                <!-- Actions, Caption, Comments, Input -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Audio Mini-Player for Maison Moment -->
+          <div class="audio-player-bar" id="audioPlayerBar">
+            <div class="player-left">
+              <div class="player-thumb">M</div>
+              <div class="player-meta">
+                <span class="player-title" id="globalPlayerTitle">Ambre • Nils Frahm</span>
+                <span class="player-time" id="playerTime">0:00 / 4:12</span>
+              </div>
+            </div>
+            <div class="player-controls">
+              <button class="player-btn play-toggle" id="btnMiniPlay">
+                <svg id="miniPlayIcon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </button>
+              <button class="player-btn" id="btnMiniClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- iOS Toast -->
+          <div class="ios-toast" id="iosToast">
+            <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" color="#B89758">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span id="toastMessage">Bildirim</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Reference Screen Showcase Drawer (Article 43 & 44) -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="storyboard-drawer" id="storyboardDrawer">
+    <div class="drawer-header">
+      <h2 class="drawer-title">Tüm Referans Ekranlar (33)</h2>
+      <button class="drawer-close" id="btnCloseDrawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-content" id="drawerContent"></div>
+  </aside>
+
+  <!-- Guided Tour Floating Bar -->
+  <div class="tour-banner" id="tourBanner" style="display: none;">
+    <div class="tour-info">
+      <span class="tour-step" id="tourStep">Adım 1 / 8</span>
+      <span class="tour-title" id="tourTitle">Kültürel Akış Turu</span>
+    </div>
+    <div class="tour-actions">
+      <button class="tour-btn" id="btnTourPrev">Önceki</button>
+      <button class="tour-btn primary" id="btnTourNext">Sonraki</button>
+      <button class="tour-btn" id="btnTourExit">&times;</button>
+    </div>
+  </div>
+
+  <script src="maison-data.js?v=3"></script>
+  <script src="screens-data.js?v=3"></script>
+  <script src="app.js?v=5"></script>
+  
+  <!-- Service Worker Registration for Offline Cache & Store Compliance -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('[MAISON SW] Registered successfully:', reg.scope))
+          .catch(err => console.warn('[MAISON SW] Registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
