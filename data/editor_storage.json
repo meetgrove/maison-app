@@ -1,0 +1,1991 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-09-29T03:00:00.048Z",
+  "sources": [
+    {
+      "id": "src_istanbul_modern",
+      "name": "İstanbul Modern Sanat Müzesi",
+      "url": "https://www.istanbulmodern.org",
+      "feedUrl": "https://www.istanbulmodern.org/tr/bulten",
+      "type": "official_institution",
+      "category": "SANAT",
+      "language": "tr",
+      "country": "TR",
+      "active": true,
+      "trust_level": "official",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.013Z",
+      "description": "Türkiye'nin ilk modern ve çağdaş sanat müzesi küratöryel sergileri ve koleksiyon bültenleri.",
+      "seed_items": [
+        {
+          "title": "Yüzen Formlar ve Işığın Hafızası: Akdeniz Çağdaş Heykel Sergisi",
+          "summary": "İstanbul Modern, Akdeniz kıyılarının doğal taş, mermer ve ışık ilişkisini odağına alan yeni retrospektif sergisini ziyarete açtı. Doğanın zamansız geometrisiyle çağdaş formların kesişimi.",
+          "url": "https://www.istanbulmodern.org/sergiler/yuzen-formlar-isigin-hafizasi",
+          "published_at": "2026-09-21T10:00:00Z",
+          "category": "SANAT",
+          "cover_image": "/images/editorial/sculpture_terrace_view.jpg",
+          "entities": [
+            "İstanbul Modern",
+            "Akdeniz Heykeli",
+            "Renzo Piano",
+            "Karaköy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_salt_online",
+      "name": "Salt Online & Araştırma",
+      "url": "https://saltonline.org",
+      "feedUrl": "https://saltonline.org/tr/program",
+      "type": "official_institution",
+      "category": "KÜLTÜR",
+      "language": "tr",
+      "country": "TR",
+      "active": true,
+      "trust_level": "official",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.017Z",
+      "description": "Görsel pratikler, mimarlık ve kentsel araştırmalar üzerine bağımsız kültür kurumu.",
+      "seed_items": [
+        {
+          "title": "Modernizmin Sessiz Mirası: Türkiye'de 1950'ler Kamu Yapıları ve Zanaat",
+          "summary": "Salt Galata'da açılan yeni arşiv sergisi, erken cumhuriyet döneminin taş, ahşap ve demir işçiliğiyle üretilmiş modernist yapılarını ve detay mimarisini belgeliyor.",
+          "url": "https://saltonline.org/tr/program/modernizmin-sessiz-mirasi-kamu-yapilari",
+          "published_at": "2026-09-22T08:30:00Z",
+          "category": "MİMARİ",
+          "cover_image": "/images/editorial/modernist_pavilion.jpg",
+          "entities": [
+            "Salt Galata",
+            "Modernizm",
+            "Karaköy",
+            "Arşiv"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_arkitekt",
+      "name": "Arkitekt & Mimarlık Dergisi",
+      "url": "https://www.arkitekt.com.tr",
+      "feedUrl": "https://www.arkitekt.com.tr/feed",
+      "type": "curated_feed",
+      "category": "MİMARİ",
+      "language": "tr",
+      "country": "TR",
+      "active": true,
+      "trust_level": "high",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.019Z",
+      "description": "Sürdürülebilir, dingin ve yerel malzemelerle tasarlanmış çağdaş mimari projeler.",
+      "seed_items": [
+        {
+          "title": "Urla'da Taş ve Zeytin Ağaçları Arasında Monolitik Bir Atölye Evi",
+          "summary": "Mimar Caner Bilgin tarafından tasarlanan tek katlı taş konut, Ege rüzgarlarına göre kurgulanan iç avlusu ve ham kireç sıvasıyla doğayla bütünleşen sakin bir sığınak sunuyor.",
+          "url": "https://www.arkitekt.com.tr/projeler/urla-tas-atolye-evi",
+          "published_at": "2026-09-22T14:15:00Z",
+          "category": "MİMARİ",
+          "cover_image": "/images/editorial/alacati_stone_house.jpg",
+          "entities": [
+            "Urla",
+            "Ege Mimarisi",
+            "Doğal Taş",
+            "İç Avlu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_kinfolk",
+      "name": "Kinfolk Magazine",
+      "url": "https://kinfolk.com",
+      "feedUrl": "https://kinfolk.com/feed",
+      "type": "curated_feed",
+      "category": "WELLNESS / YAŞAM",
+      "language": "en",
+      "country": "GLOBAL",
+      "active": true,
+      "trust_level": "high",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.022Z",
+      "description": "Slow living, deliberate spaces, craft, and thoughtful daily rituals.",
+      "seed_items": [
+        {
+          "title": "The Art of Slow Mornings: Crafting Rituals in Quiet Domestic Spaces",
+          "summary": "Exploring how deliberate morning light, hand-dripped coffee, and analog reading hours establish an unhurried cadence for creative professionals in Copenhagen and Kyoto.",
+          "url": "https://kinfolk.com/the-art-of-slow-mornings-crafting-rituals",
+          "published_at": "2026-09-22T06:00:00Z",
+          "category": "WELLNESS / YAŞAM",
+          "cover_image": "/images/editorial/slow_living_coffee_terrace.jpg",
+          "entities": [
+            "Kinfolk",
+            "Slow Living",
+            "Copenhagen",
+            "Rituals"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_cereal",
+      "name": "Cereal Magazine",
+      "url": "https://readcereal.com",
+      "feedUrl": "https://readcereal.com/feed",
+      "type": "curated_feed",
+      "category": "SEYAHAT",
+      "language": "en",
+      "country": "UK",
+      "active": true,
+      "trust_level": "high",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.025Z",
+      "description": "Travel & style publication focusing on minimalist architecture, design, and poetic voyages.",
+      "seed_items": [
+        {
+          "title": "Kyoto's Hidden Machiya: Timber, Shadows, and Century-Old Tea Houses",
+          "summary": "A contemplative journey through the quiet alleys of Higashiyama, where restored wooden machiya townhouses preserve tactile wabi-sabi philosophy amidst modern Japan.",
+          "url": "https://readcereal.com/kyotos-hidden-machiya-timber-and-shadows",
+          "published_at": "2026-09-21T18:40:00Z",
+          "category": "SEYAHAT",
+          "cover_image": "/images/editorial/japan_minimalist_temple.jpg",
+          "entities": [
+            "Kyoto",
+            "Higashiyama",
+            "Machiya",
+            "Wabi-Sabi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_k24",
+      "name": "K24 Kitap & Kültür Eleştirisi",
+      "url": "https://t24.com.tr/k24",
+      "feedUrl": "https://t24.com.tr/rss/k24",
+      "type": "curated_feed",
+      "category": "KİTAPLAR",
+      "language": "tr",
+      "country": "TR",
+      "active": true,
+      "trust_level": "high",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.027Z",
+      "description": "Edebi eleştiriler, felsefi denemeler ve dünya klasikleri üzerine derin okumalar.",
+      "seed_items": [
+        {
+          "title": "Sessizliğin Dili: Tanpınar'ın Saatleri ve Zamanın Estetik Algısı",
+          "summary": "Ahmet Hamdi Tanpınar'ın metinlerinde zamanın mekanik bir akıştan çıkıp içsel bir müzikaliteye dönüşmesi üzerine derin bir inceleme ve edebi şerh.",
+          "url": "https://t24.com.tr/k24/yazi/tanpinar-saatler-zaman-algisi",
+          "published_at": "2026-09-22T11:00:00Z",
+          "category": "KİTAPLAR",
+          "cover_image": "/images/editorial/antique_library_books.jpg",
+          "entities": [
+            "Ahmet Hamdi Tanpınar",
+            "Edebiyat",
+            "Zaman Felsefesi",
+            "Saatleri Ayarlama Enstitüsü"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_the_marginalian",
+      "name": "The Marginalian (Maria Popova)",
+      "url": "https://www.themarginalian.org",
+      "feedUrl": "https://www.themarginalian.org/feed/",
+      "type": "curated_feed",
+      "category": "FİKİR / FELSEFE",
+      "language": "en",
+      "country": "US",
+      "active": true,
+      "trust_level": "high",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.033Z",
+      "description": "Meaning, creative spirit, philosophy, and timeless intellectual inquiries.",
+      "seed_items": [
+        {
+          "title": "Solitude as an Act of Love: Rilke on Space, Independence, and Intimacy",
+          "summary": "Reflecting on Rainer Maria Rilke's timeless letters about how two solitude-guarding souls create the deepest form of human communion.",
+          "url": "https://www.themarginalian.org/rilke-letters-solitude-love",
+          "published_at": "2026-09-20T15:20:00Z",
+          "category": "FİKİR / FELSEFE",
+          "cover_image": "/images/editorial/dim_kitaplar.jpg",
+          "entities": [
+            "Rainer Maria Rilke",
+            "Maria Popova",
+            "Solitude",
+            "Philosophy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_aperture",
+      "name": "Aperture Foundation",
+      "url": "https://aperture.org",
+      "feedUrl": "https://aperture.org/feed",
+      "type": "official_institution",
+      "category": "FOTOĞRAF",
+      "language": "en",
+      "country": "US",
+      "active": true,
+      "trust_level": "official",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.035Z",
+      "description": "Non-profit visual foundation dedicated to the craft and narrative of fine art photography.",
+      "seed_items": [
+        {
+          "title": "Analog Shadows: The Resurgence of Medium Format Monochrome Prints",
+          "summary": "A curated look into contemporary darkroom artisans who reject instant digital feeds in favor of silver gelatin chemistry and meditative patience.",
+          "url": "https://aperture.org/editorial/analog-shadows-medium-format",
+          "published_at": "2026-09-21T12:00:00Z",
+          "category": "FOTOĞRAF",
+          "cover_image": "/images/editorial/darkroom_monochrome.jpg",
+          "entities": [
+            "Aperture",
+            "Medium Format",
+            "Analog Photography",
+            "Monochrome"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_dezeen_design",
+      "name": "Dezeen & Design Craft",
+      "url": "https://www.dezeen.com",
+      "feedUrl": "https://www.dezeen.com/feed",
+      "type": "curated_feed",
+      "category": "TASARIM",
+      "language": "en",
+      "country": "GLOBAL",
+      "active": true,
+      "trust_level": "high",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.041Z",
+      "description": "Leading international architecture, interiors and thoughtful industrial design magazine.",
+      "seed_items": [
+        {
+          "title": "Cast Bronze and Raw Linen: Minimalist Lighting Objects from Milan Atelier",
+          "summary": "Italian design studio Forma crafts limited-edition floor luminaires that celebrate the weight of sand-cast bronze paired with tactile hand-spun Florentine linen.",
+          "url": "https://www.dezeen.com/design/cast-bronze-raw-linen-milan-atelier",
+          "published_at": "2026-09-22T09:45:00Z",
+          "category": "TASARIM",
+          "cover_image": "/images/editorial/ceramic_vase_minimal.jpg",
+          "entities": [
+            "Milan Design",
+            "Cast Bronze",
+            "Linen Lighting",
+            "Artisan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_the_gourmand",
+      "name": "The Gourmand & Culinary Heritage",
+      "url": "https://thegourmand.co.uk",
+      "feedUrl": "https://thegourmand.co.uk/feed",
+      "type": "curated_feed",
+      "category": "GASTRONOMİ",
+      "language": "en",
+      "country": "UK",
+      "active": true,
+      "trust_level": "high",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.042Z",
+      "description": "Award-winning food and culture journal bridging gastronomy, art, and heritage.",
+      "seed_items": [
+        {
+          "title": "Heirloom Olive Groves of the Aegean: Slow Harvesting and Cold Extraction",
+          "summary": "Documenting generational smallholders along the Ayvalık coastline who press centuries-old Memecik olives within hours of hand-picking to capture grassy, peppery polyphenols.",
+          "url": "https://thegourmand.co.uk/heirloom-olive-groves-aegean",
+          "published_at": "2026-09-22T13:30:00Z",
+          "category": "GASTRONOMİ",
+          "cover_image": "/images/editorial/gastronomy_pasta.jpg",
+          "entities": [
+            "Ayvalık",
+            "Zeytinyağı",
+            "Ege Gastronomisi",
+            "Hasat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_crafts_council",
+      "name": "Crafts Council & Studio Archives",
+      "url": "https://www.craftscouncil.org.uk",
+      "feedUrl": "https://www.craftscouncil.org.uk/feed",
+      "type": "official_institution",
+      "category": "STUDIO",
+      "language": "en",
+      "country": "UK",
+      "active": true,
+      "trust_level": "official",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.045Z",
+      "description": "National charity for craft promoting contemporary makers, master workshops and heritage skills.",
+      "seed_items": [
+        {
+          "title": "Mastering the Wheel: Wood-Fired Ceramic Kilns and Japanese Bizen Techniques",
+          "summary": "An inside look into an artist collective firing an anagama kiln continuously for seven days, allowing natural ash glazes and kiln smoke to paint unrepeatable organic patterns.",
+          "url": "https://www.craftscouncil.org.uk/stories/mastering-the-wheel-wood-fired-ceramics",
+          "published_at": "2026-09-21T16:00:00Z",
+          "category": "STUDIO",
+          "cover_image": "/images/editorial/dim_nesneler.jpg",
+          "entities": [
+            "Seramik",
+            "Anagama Fırını",
+            "Bizen",
+            "Zanaat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "src_songlines",
+      "name": "Songlines & Acoustic Landscapes",
+      "url": "https://www.songlines.co.uk",
+      "feedUrl": "https://www.songlines.co.uk/feed",
+      "type": "curated_feed",
+      "category": "MÜZİK",
+      "language": "en",
+      "country": "GLOBAL",
+      "active": true,
+      "trust_level": "high",
+      "health_status": "active",
+      "consecutive_errors": 0,
+      "last_checked_at": "2026-09-29T03:00:00.047Z",
+      "description": "Global acoustic roots, meditative instrumental masters, and soundscapes.",
+      "seed_items": [
+        {
+          "title": "Strings Across the Silk Road: The Meditative Power of Ney and Kamancheh",
+          "summary": "Exploring how modal improvisation and acoustic resonance invite stillness in contemporary concert halls from Istanbul to Lyon.",
+          "url": "https://www.songlines.co.uk/features/strings-across-the-silk-road",
+          "published_at": "2026-09-20T20:00:00Z",
+          "category": "MÜZİK",
+          "cover_image": "/images/editorial/dim_muzikler.jpg",
+          "entities": [
+            "Ney",
+            "Kamancheh",
+            "Makam",
+            "Doğu-Batı Rezonansı"
+          ]
+        }
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "cand_1790157248073_5qf76v",
+      "source_id": "src_songlines",
+      "source_name": "Songlines & Acoustic Landscapes",
+      "source_url": "https://www.songlines.co.uk/features/strings-across-the-silk-road",
+      "source_title": "Strings Across the Silk Road: The Meditative Power of Ney and Kamancheh",
+      "source_description": "Exploring how modal improvisation and acoustic resonance invite stillness in contemporary concert halls from Istanbul to Lyon.",
+      "source_published_at": "2026-09-20T20:00:00Z",
+      "discovered_at": "2026-09-23T09:54:08.073Z",
+      "raw_content_reference": "",
+      "category": "MÜZİK",
+      "cover_image": "/images/editorial/dim_muzikler.jpg",
+      "image_attribution": "Songlines & Acoustic Landscapes",
+      "entities": [
+        "Ney",
+        "Kamancheh",
+        "Makam",
+        "Doğu-Batı Rezonansı"
+      ],
+      "status": "published",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Songlines & Acoustic Landscapes bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Ney",
+            "Kamancheh",
+            "Makam",
+            "Doğu-Batı Rezonansı"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248069_v3dt24",
+      "source_id": "src_crafts_council",
+      "source_name": "Crafts Council & Studio Archives",
+      "source_url": "https://www.craftscouncil.org.uk/stories/mastering-the-wheel-wood-fired-ceramics",
+      "source_title": "Mastering the Wheel: Wood-Fired Ceramic Kilns and Japanese Bizen Techniques",
+      "source_description": "An inside look into an artist collective firing an anagama kiln continuously for seven days, allowing natural ash glazes and kiln smoke to paint unrepeatable organic patterns.",
+      "source_published_at": "2026-09-21T16:00:00Z",
+      "discovered_at": "2026-09-23T09:54:08.069Z",
+      "raw_content_reference": "",
+      "category": "STUDIO",
+      "cover_image": "/images/editorial/dim_nesneler.jpg",
+      "image_attribution": "Crafts Council & Studio Archives",
+      "entities": [
+        "Seramik",
+        "Anagama Fırını",
+        "Bizen",
+        "Zanaat"
+      ],
+      "status": "published",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Malzemenin özüne saygı duyan zanaatkar sabrının, çağdaş tasarım diliyle kusursuz uyumu.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Seramik",
+            "Anagama Fırını",
+            "Bizen",
+            "Zanaat"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248063_eyb36a",
+      "source_id": "src_the_gourmand",
+      "source_name": "The Gourmand & Culinary Heritage",
+      "source_url": "https://thegourmand.co.uk/heirloom-olive-groves-aegean",
+      "source_title": "Heirloom Olive Groves of the Aegean: Slow Harvesting and Cold Extraction",
+      "source_description": "Documenting generational smallholders along the Ayvalık coastline who press centuries-old Memecik olives within hours of hand-picking to capture grassy, peppery polyphenols.",
+      "source_published_at": "2026-09-22T13:30:00Z",
+      "discovered_at": "2026-09-23T09:54:08.063Z",
+      "raw_content_reference": "",
+      "category": "GASTRONOMİ",
+      "cover_image": "/images/editorial/gastronomy_pasta.jpg",
+      "image_attribution": "The Gourmand & Culinary Heritage",
+      "entities": [
+        "Ayvalık",
+        "Zeytinyağı",
+        "Ege Gastronomisi",
+        "Hasat"
+      ],
+      "status": "drafted",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "The Gourmand & Culinary Heritage bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Ayvalık",
+            "Zeytinyağı",
+            "Ege Gastronomisi",
+            "Hasat"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248058_u78yhz",
+      "source_id": "src_dezeen_design",
+      "source_name": "Dezeen & Design Craft",
+      "source_url": "https://www.dezeen.com/design/cast-bronze-raw-linen-milan-atelier",
+      "source_title": "Cast Bronze and Raw Linen: Minimalist Lighting Objects from Milan Atelier",
+      "source_description": "Italian design studio Forma crafts limited-edition floor luminaires that celebrate the weight of sand-cast bronze paired with tactile hand-spun Florentine linen.",
+      "source_published_at": "2026-09-22T09:45:00Z",
+      "discovered_at": "2026-09-23T09:54:08.058Z",
+      "raw_content_reference": "",
+      "category": "TASARIM",
+      "cover_image": "/images/editorial/ceramic_vase_minimal.jpg",
+      "image_attribution": "Dezeen & Design Craft",
+      "entities": [
+        "Milan Design",
+        "Cast Bronze",
+        "Linen Lighting",
+        "Artisan"
+      ],
+      "status": "rejected",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 85,
+        "signals": {
+          "cultural_value": 90,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 94
+        },
+        "editorial_angle": "Dezeen & Design Craft bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Milan Design",
+            "Cast Bronze",
+            "Linen Lighting",
+            "Artisan"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "reject_reason": "MAISON editoryal standardına uygun bulunmadı"
+    },
+    {
+      "id": "cand_1790157248052_j1tv6t",
+      "source_id": "src_aperture",
+      "source_name": "Aperture Foundation",
+      "source_url": "https://aperture.org/editorial/analog-shadows-medium-format",
+      "source_title": "Analog Shadows: The Resurgence of Medium Format Monochrome Prints",
+      "source_description": "A curated look into contemporary darkroom artisans who reject instant digital feeds in favor of silver gelatin chemistry and meditative patience.",
+      "source_published_at": "2026-09-21T12:00:00Z",
+      "discovered_at": "2026-09-23T09:54:08.052Z",
+      "raw_content_reference": "",
+      "category": "FOTOĞRAF",
+      "cover_image": "/images/editorial/darkroom_monochrome.jpg",
+      "image_attribution": "Aperture Foundation",
+      "entities": [
+        "Aperture",
+        "Medium Format",
+        "Analog Photography",
+        "Monochrome"
+      ],
+      "status": "drafted",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Aperture Foundation bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Aperture",
+            "Medium Format",
+            "Analog Photography",
+            "Monochrome"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248041_isqj2j",
+      "source_id": "src_the_marginalian",
+      "source_name": "The Marginalian (Maria Popova)",
+      "source_url": "https://www.themarginalian.org/rilke-letters-solitude-love",
+      "source_title": "Solitude as an Act of Love: Rilke on Space, Independence, and Intimacy",
+      "source_description": "Reflecting on Rainer Maria Rilke's timeless letters about how two solitude-guarding souls create the deepest form of human communion.",
+      "source_published_at": "2026-09-20T15:20:00Z",
+      "discovered_at": "2026-09-23T09:54:08.041Z",
+      "raw_content_reference": "",
+      "category": "FİKİR / FELSEFE",
+      "cover_image": "/images/editorial/dim_kitaplar.jpg",
+      "image_attribution": "The Marginalian (Maria Popova)",
+      "entities": [
+        "Rainer Maria Rilke",
+        "Maria Popova",
+        "Solitude",
+        "Philosophy"
+      ],
+      "status": "drafted",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Yalnızlık, yaratıcılık ve içsel huzur kavramlarını edebiyatın bilge tanıklığıyla ele alan zamansız bir metin.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Rainer Maria Rilke",
+            "Maria Popova",
+            "Solitude",
+            "Philosophy"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248031_614bjp",
+      "source_id": "src_k24",
+      "source_name": "K24 Kitap & Kültür Eleştirisi",
+      "source_url": "https://t24.com.tr/k24/yazi/tanpinar-saatler-zaman-algisi",
+      "source_title": "Sessizliğin Dili: Tanpınar'ın Saatleri ve Zamanın Estetik Algısı",
+      "source_description": "Ahmet Hamdi Tanpınar'ın metinlerinde zamanın mekanik bir akıştan çıkıp içsel bir müzikaliteye dönüşmesi üzerine derin bir inceleme ve edebi şerh.",
+      "source_published_at": "2026-09-22T11:00:00Z",
+      "discovered_at": "2026-09-23T09:54:08.031Z",
+      "raw_content_reference": "",
+      "category": "KİTAPLAR",
+      "cover_image": "/images/editorial/antique_library_books.jpg",
+      "image_attribution": "K24 Kitap & Kültür Eleştirisi",
+      "entities": [
+        "Ahmet Hamdi Tanpınar",
+        "Edebiyat",
+        "Zaman Felsefesi",
+        "Saatleri Ayarlama Enstitüsü"
+      ],
+      "status": "drafted",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 86,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 90,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 95
+        },
+        "editorial_angle": "K24 Kitap & Kültür Eleştirisi bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Ahmet Hamdi Tanpınar",
+            "Edebiyat",
+            "Zaman Felsefesi",
+            "Saatleri Ayarlama Enstitüsü"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248027_k1e2do",
+      "source_id": "src_cereal",
+      "source_name": "Cereal Magazine",
+      "source_url": "https://readcereal.com/kyotos-hidden-machiya-timber-and-shadows",
+      "source_title": "Kyoto's Hidden Machiya: Timber, Shadows, and Century-Old Tea Houses",
+      "source_description": "A contemplative journey through the quiet alleys of Higashiyama, where restored wooden machiya townhouses preserve tactile wabi-sabi philosophy amidst modern Japan.",
+      "source_published_at": "2026-09-21T18:40:00Z",
+      "discovered_at": "2026-09-23T09:54:08.027Z",
+      "raw_content_reference": "",
+      "category": "SEYAHAT",
+      "cover_image": "/images/editorial/japan_minimalist_temple.jpg",
+      "image_attribution": "Cereal Magazine",
+      "entities": [
+        "Kyoto",
+        "Higashiyama",
+        "Machiya",
+        "Wabi-Sabi"
+      ],
+      "status": "drafted",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Cereal Magazine bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Kyoto",
+            "Higashiyama",
+            "Machiya",
+            "Wabi-Sabi"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248023_4i9i94",
+      "source_id": "src_kinfolk",
+      "source_name": "Kinfolk Magazine",
+      "source_url": "https://kinfolk.com/the-art-of-slow-mornings-crafting-rituals",
+      "source_title": "The Art of Slow Mornings: Crafting Rituals in Quiet Domestic Spaces",
+      "source_description": "Exploring how deliberate morning light, hand-dripped coffee, and analog reading hours establish an unhurried cadence for creative professionals in Copenhagen and Kyoto.",
+      "source_published_at": "2026-09-22T06:00:00Z",
+      "discovered_at": "2026-09-23T09:54:08.023Z",
+      "raw_content_reference": "",
+      "category": "WELLNESS / YAŞAM",
+      "cover_image": "/images/editorial/slow_living_coffee_terrace.jpg",
+      "image_attribution": "Kinfolk Magazine",
+      "entities": [
+        "Kinfolk",
+        "Slow Living",
+        "Copenhagen",
+        "Rituals"
+      ],
+      "status": "drafted",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Gündelik hayatın telaşından sıyrılıp zamana alan açan, özenli sabah ritüellerine dair ilham verici bir bakış.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Kinfolk",
+            "Slow Living",
+            "Copenhagen",
+            "Rituals"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248019_mn5w8e",
+      "source_id": "src_arkitekt",
+      "source_name": "Arkitekt & Mimarlık Dergisi",
+      "source_url": "https://www.arkitekt.com.tr/projeler/urla-tas-atolye-evi",
+      "source_title": "Urla'da Taş ve Zeytin Ağaçları Arasında Monolitik Bir Atölye Evi",
+      "source_description": "Mimar Caner Bilgin tarafından tasarlanan tek katlı taş konut, Ege rüzgarlarına göre kurgulanan iç avlusu ve ham kireç sıvasıyla doğayla bütünleşen sakin bir sığınak sunuyor.",
+      "source_published_at": "2026-09-22T14:15:00Z",
+      "discovered_at": "2026-09-23T09:54:08.019Z",
+      "raw_content_reference": "",
+      "category": "MİMARİ",
+      "cover_image": "/images/editorial/alacati_stone_house.jpg",
+      "image_attribution": "Arkitekt & Mimarlık Dergisi",
+      "entities": [
+        "Urla",
+        "Ege Mimarisi",
+        "Doğal Taş",
+        "İç Avlu"
+      ],
+      "status": "published",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 87,
+        "signals": {
+          "cultural_value": 96,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 98
+        },
+        "editorial_angle": "Yerel dokuya saygılı mimari çizginin, mekan ve insan ruhu arasındaki dingin diyaloğunu açığa çıkarıyor.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Urla",
+            "Ege Mimarisi",
+            "Doğal Taş",
+            "İç Avlu"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248015_v9xnna",
+      "source_id": "src_salt_online",
+      "source_name": "Salt Online & Araştırma",
+      "source_url": "https://saltonline.org/tr/program/modernizmin-sessiz-mirasi-kamu-yapilari",
+      "source_title": "Modernizmin Sessiz Mirası: Türkiye'de 1950'ler Kamu Yapıları ve Zanaat",
+      "source_description": "Salt Galata'da açılan yeni arşiv sergisi, erken cumhuriyet döneminin taş, ahşap ve demir işçiliğiyle üretilmiş modernist yapılarını ve detay mimarisini belgeliyor.",
+      "source_published_at": "2026-09-22T08:30:00Z",
+      "discovered_at": "2026-09-23T09:54:08.015Z",
+      "raw_content_reference": "",
+      "category": "MİMARİ",
+      "cover_image": "/images/editorial/modernist_pavilion.jpg",
+      "image_attribution": "Salt Online & Araştırma",
+      "entities": [
+        "Salt Galata",
+        "Modernizm",
+        "Karaköy",
+        "Arşiv"
+      ],
+      "status": "drafted",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 88,
+        "signals": {
+          "cultural_value": 98,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 98
+        },
+        "editorial_angle": "Yerel dokuya saygılı mimari çizginin, mekan ve insan ruhu arasındaki dingin diyaloğunu açığa çıkarıyor.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Salt Galata",
+            "Modernizm",
+            "Karaköy",
+            "Arşiv"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    },
+    {
+      "id": "cand_1790157248010_8s7684",
+      "source_id": "src_istanbul_modern",
+      "source_name": "İstanbul Modern Sanat Müzesi",
+      "source_url": "https://www.istanbulmodern.org/sergiler/yuzen-formlar-isigin-hafizasi",
+      "source_title": "Yüzen Formlar ve Işığın Hafızası: Akdeniz Çağdaş Heykel Sergisi",
+      "source_description": "İstanbul Modern, Akdeniz kıyılarının doğal taş, mermer ve ışık ilişkisini odağına alan yeni retrospektif sergisini ziyarete açtı. Doğanın zamansız geometrisiyle çağdaş formların kesişimi.",
+      "source_published_at": "2026-09-21T10:00:00Z",
+      "discovered_at": "2026-09-23T09:54:08.010Z",
+      "raw_content_reference": "",
+      "category": "SANAT",
+      "cover_image": "/images/editorial/sculpture_terrace_view.jpg",
+      "image_attribution": "İstanbul Modern Sanat Müzesi",
+      "entities": [
+        "İstanbul Modern",
+        "Akdeniz Heykeli",
+        "Renzo Piano",
+        "Karaköy"
+      ],
+      "status": "drafted",
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 90,
+        "signals": {
+          "cultural_value": 98,
+          "editorial_depth": 90,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 98
+        },
+        "editorial_angle": "Çağdaş formların malzeme hafızasıyla buluştuğu, estetik ve düşünsel derinlik barındıran güçlü bir sergi.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "İstanbul Modern",
+            "Akdeniz Heykeli",
+            "Renzo Piano",
+            "Karaköy"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      }
+    }
+  ],
+  "drafts": [
+    {
+      "id": "draft_1790157248076_966hft",
+      "candidate_id": "cand_1790157248073_5qf76v",
+      "title": "Strings Across the Silk Road",
+      "subtitle": "Exploring how modal improvisation and acoustic resonance invite stillness in contemporary concert halls from Istanbul...",
+      "curation_tag": "Haftanın Keşfi",
+      "category": "MÜZİK",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Songlines & Acoustic Landscapes bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+      "quote": "“Güzel insanlar, güzel fikirlerle daha güzel bir dünyaya.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Songlines & Acoustic Landscapes kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Strings Across the Silk Road: The Meditative Power of Ney and Kamancheh ekseninde şekillenen bu çalışma, Ney, Kamancheh, Makam, Doğu-Batı Rezonansı gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Exploring how modal improvisation and acoustic resonance invite stillness in contemporary concert halls from Istanbul to Lyon.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Songlines & Acoustic Landscapes tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Deniz Kaya",
+      "author_role": "Kültür & Sanat Küratörü",
+      "author_avatar": "/images/editorial/author_deniz.jpg",
+      "cover_image": "/images/editorial/dim_muzikler.jpg",
+      "source_name": "Songlines & Acoustic Landscapes",
+      "source_url": "https://www.songlines.co.uk/features/strings-across-the-silk-road",
+      "tags": [
+        "müzi̇k",
+        "editoryal",
+        "kültür",
+        "ney",
+        "kamancheh",
+        "makam"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 83,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Songlines & Acoustic Landscapes bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Ney",
+            "Kamancheh",
+            "Makam",
+            "Doğu-Batı Rezonansı"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "published",
+      "created_at": "2026-09-23T09:54:08.076Z",
+      "updated_at": "2026-09-23T12:35:00.350Z",
+      "published_at": "2026-09-23T12:35:00.349Z"
+    },
+    {
+      "id": "draft_1790157248071_kurye1",
+      "candidate_id": "cand_1790157248069_v3dt24",
+      "title": "Mastering the Wheel",
+      "subtitle": "An inside look into an artist collective firing an anagama kiln continuously for seven days, allowing natural ash gla...",
+      "curation_tag": "Editoryal Bakış",
+      "category": "STUDIO",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Malzemenin özüne saygı duyan zanaatkar sabrının, çağdaş tasarım diliyle kusursuz uyumu.",
+      "quote": "“Nesnelerin ruhu, zanaatkarın sabrında ve malzemenin dürüstlüğünde saklıdır.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Crafts Council & Studio Archives kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Mastering the Wheel: Wood-Fired Ceramic Kilns and Japanese Bizen Techniques ekseninde şekillenen bu çalışma, Seramik, Anagama Fırını, Bizen, Zanaat gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. An inside look into an artist collective firing an anagama kiln continuously for seven days, allowing natural ash glazes and kiln smoke to paint unrepeatable organic patterns.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Crafts Council & Studio Archives tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Selin Arslan",
+      "author_role": "Mimarlık & Tasarım Editörü",
+      "author_avatar": "/images/editorial/author_selin.jpg",
+      "cover_image": "/images/editorial/dim_nesneler.jpg",
+      "source_name": "Crafts Council & Studio Archives",
+      "source_url": "https://www.craftscouncil.org.uk/stories/mastering-the-wheel-wood-fired-ceramics",
+      "tags": [
+        "studio",
+        "editoryal",
+        "kültür",
+        "seramik",
+        "anagama-fırını",
+        "bizen"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 83,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Malzemenin özüne saygı duyan zanaatkar sabrının, çağdaş tasarım diliyle kusursuz uyumu.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Seramik",
+            "Anagama Fırını",
+            "Bizen",
+            "Zanaat"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "published",
+      "created_at": "2026-09-23T09:54:08.071Z",
+      "updated_at": "2026-09-23T12:38:43.574Z",
+      "published_at": "2026-09-23T12:38:43.574Z"
+    },
+    {
+      "id": "draft_1790157248066_wx626s",
+      "candidate_id": "cand_1790157248063_eyb36a",
+      "title": "Heirloom Olive Groves of the Aegean",
+      "subtitle": "Documenting generational smallholders along the Ayvalık coastline who press centuries-old Memecik olives within hours...",
+      "curation_tag": "Haftanın Keşfi",
+      "category": "GASTRONOMİ",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "The Gourmand & Culinary Heritage bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+      "quote": "“Güzel insanlar, güzel fikirlerle daha güzel bir dünyaya.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. The Gourmand & Culinary Heritage kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Heirloom Olive Groves of the Aegean: Slow Harvesting and Cold Extraction ekseninde şekillenen bu çalışma, Ayvalık, Zeytinyağı, Ege Gastronomisi, Hasat gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Documenting generational smallholders along the Ayvalık coastline who press centuries-old Memecik olives within hours of hand-picking to capture grassy, peppery polyphenols.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. The Gourmand & Culinary Heritage tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Can Demir",
+      "author_role": "Edebiyat & Fikir Araştırmacısı",
+      "author_avatar": "/images/editorial/author_can.jpg",
+      "cover_image": "/images/editorial/gastronomy_pasta.jpg",
+      "source_name": "The Gourmand & Culinary Heritage",
+      "source_url": "https://thegourmand.co.uk/heirloom-olive-groves-aegean",
+      "tags": [
+        "gastronomi̇",
+        "editoryal",
+        "kültür",
+        "ayvalık",
+        "zeytinyağı",
+        "ege-gastronomisi"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 83,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "The Gourmand & Culinary Heritage bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Ayvalık",
+            "Zeytinyağı",
+            "Ege Gastronomisi",
+            "Hasat"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "pending_review",
+      "created_at": "2026-09-23T09:54:08.066Z",
+      "updated_at": "2026-09-23T09:54:08.066Z"
+    },
+    {
+      "id": "draft_1790157248060_4and74",
+      "candidate_id": "cand_1790157248058_u78yhz",
+      "title": "Cast Bronze and Raw Linen",
+      "subtitle": "Italian design studio Forma crafts limited-edition floor luminaires that celebrate the weight of sand-cast bronze pai...",
+      "curation_tag": "Mekân ve Dinginlik",
+      "category": "TASARIM",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Dezeen & Design Craft bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+      "quote": "“Güzel insanlar, güzel fikirlerle daha güzel bir dünyaya.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Dezeen & Design Craft kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Cast Bronze and Raw Linen: Minimalist Lighting Objects from Milan Atelier ekseninde şekillenen bu çalışma, Milan Design, Cast Bronze, Linen Lighting, Artisan gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Italian design studio Forma crafts limited-edition floor luminaires that celebrate the weight of sand-cast bronze paired with tactile hand-spun Florentine linen.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Dezeen & Design Craft tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Deniz Kaya",
+      "author_role": "Kültür & Sanat Küratörü",
+      "author_avatar": "/images/editorial/author_deniz.jpg",
+      "cover_image": "/images/editorial/ceramic_vase_minimal.jpg",
+      "source_name": "Dezeen & Design Craft",
+      "source_url": "https://www.dezeen.com/design/cast-bronze-raw-linen-milan-atelier",
+      "tags": [
+        "tasarim",
+        "editoryal",
+        "kültür",
+        "milan-design",
+        "cast-bronze",
+        "linen-lighting"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 85,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 85,
+        "signals": {
+          "cultural_value": 90,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 94
+        },
+        "editorial_angle": "Dezeen & Design Craft bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Milan Design",
+            "Cast Bronze",
+            "Linen Lighting",
+            "Artisan"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "rejected",
+      "created_at": "2026-09-23T09:54:08.060Z",
+      "updated_at": "2026-09-23T12:42:01.795Z",
+      "reject_reason": "MAISON editoryal standardına uygun bulunmadı"
+    },
+    {
+      "id": "draft_1790157248055_803nb7",
+      "candidate_id": "cand_1790157248052_j1tv6t",
+      "title": "Analog Shadows",
+      "subtitle": "A curated look into contemporary darkroom artisans who reject instant digital feeds in favor of silver gelatin chemis...",
+      "curation_tag": "Mekân ve Dinginlik",
+      "category": "FOTOĞRAF",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Aperture Foundation bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+      "quote": "“Güzel insanlar, güzel fikirlerle daha güzel bir dünyaya.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Aperture Foundation kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Analog Shadows: The Resurgence of Medium Format Monochrome Prints ekseninde şekillenen bu çalışma, Aperture, Medium Format, Analog Photography, Monochrome gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. A curated look into contemporary darkroom artisans who reject instant digital feeds in favor of silver gelatin chemistry and meditative patience.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Aperture Foundation tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Can Demir",
+      "author_role": "Edebiyat & Fikir Araştırmacısı",
+      "author_avatar": "/images/editorial/author_can.jpg",
+      "cover_image": "/images/editorial/darkroom_monochrome.jpg",
+      "source_name": "Aperture Foundation",
+      "source_url": "https://aperture.org/editorial/analog-shadows-medium-format",
+      "tags": [
+        "fotoğraf",
+        "editoryal",
+        "kültür",
+        "aperture",
+        "medium-format",
+        "analog-photography"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 83,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Aperture Foundation bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Aperture",
+            "Medium Format",
+            "Analog Photography",
+            "Monochrome"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "pending_review",
+      "created_at": "2026-09-23T09:54:08.055Z",
+      "updated_at": "2026-09-23T09:54:08.055Z"
+    },
+    {
+      "id": "draft_1790157248048_qft7hh",
+      "candidate_id": "cand_1790157248041_isqj2j",
+      "title": "Solitude as an Act of Love",
+      "subtitle": "Reflecting on Rainer Maria Rilke's timeless letters about how two solitude-guarding souls create the deepest form of ...",
+      "curation_tag": "Bugün 6 dakikanı ayır",
+      "category": "FİKİR / FELSEFE",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Yalnızlık, yaratıcılık ve içsel huzur kavramlarını edebiyatın bilge tanıklığıyla ele alan zamansız bir metin.",
+      "quote": "“Güzel insanlar, güzel fikirlerle daha güzel bir dünyaya.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. The Marginalian (Maria Popova) kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Solitude as an Act of Love: Rilke on Space, Independence, and Intimacy ekseninde şekillenen bu çalışma, Rainer Maria Rilke, Maria Popova, Solitude, Philosophy gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Reflecting on Rainer Maria Rilke's timeless letters about how two solitude-guarding souls create the deepest form of human communion.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. The Marginalian (Maria Popova) tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Can Demir",
+      "author_role": "Edebiyat & Fikir Araştırmacısı",
+      "author_avatar": "/images/editorial/author_can.jpg",
+      "cover_image": "/images/editorial/dim_kitaplar.jpg",
+      "source_name": "The Marginalian (Maria Popova)",
+      "source_url": "https://www.themarginalian.org/rilke-letters-solitude-love",
+      "tags": [
+        "fi̇ki̇r / felsefe",
+        "editoryal",
+        "kültür",
+        "rainer-maria-rilke",
+        "maria-popova",
+        "solitude"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 83,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Yalnızlık, yaratıcılık ve içsel huzur kavramlarını edebiyatın bilge tanıklığıyla ele alan zamansız bir metin.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Rainer Maria Rilke",
+            "Maria Popova",
+            "Solitude",
+            "Philosophy"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "pending_review",
+      "created_at": "2026-09-23T09:54:08.048Z",
+      "updated_at": "2026-09-23T09:54:08.048Z"
+    },
+    {
+      "id": "draft_1790157248034_59rjq9",
+      "candidate_id": "cand_1790157248031_614bjp",
+      "title": "Sessizliğin Dili",
+      "subtitle": "Ahmet Hamdi Tanpınar'ın metinlerinde zamanın mekanik bir akıştan çıkıp içsel bir müzikaliteye dönüşmesi üzerine derin...",
+      "curation_tag": "Haftanın Keşfi",
+      "category": "KİTAPLAR",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "K24 Kitap & Kültür Eleştirisi bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+      "quote": "“Zamanın hakiki nabzı saatlerin tik-taklarında değil, sayfaların arasındaki duraklarda atar.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. K24 Kitap & Kültür Eleştirisi kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Sessizliğin Dili: Tanpınar'ın Saatleri ve Zamanın Estetik Algısı ekseninde şekillenen bu çalışma, Ahmet Hamdi Tanpınar, Edebiyat, Zaman Felsefesi, Saatleri Ayarlama Enstitüsü gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Ahmet Hamdi Tanpınar'ın metinlerinde zamanın mekanik bir akıştan çıkıp içsel bir müzikaliteye dönüşmesi üzerine derin bir inceleme ve edebi şerh.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. K24 Kitap & Kültür Eleştirisi tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Can Demir",
+      "author_role": "Edebiyat & Fikir Araştırmacısı",
+      "author_avatar": "/images/editorial/author_can.jpg",
+      "cover_image": "/images/editorial/antique_library_books.jpg",
+      "source_name": "K24 Kitap & Kültür Eleştirisi",
+      "source_url": "https://t24.com.tr/k24/yazi/tanpinar-saatler-zaman-algisi",
+      "tags": [
+        "ki̇taplar",
+        "editoryal",
+        "kültür",
+        "ahmet-hamdi-tanpınar",
+        "edebiyat",
+        "zaman-felsefesi"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 86,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 86,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 90,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 95
+        },
+        "editorial_angle": "K24 Kitap & Kültür Eleştirisi bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Ahmet Hamdi Tanpınar",
+            "Edebiyat",
+            "Zaman Felsefesi",
+            "Saatleri Ayarlama Enstitüsü"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "pending_review",
+      "created_at": "2026-09-23T09:54:08.034Z",
+      "updated_at": "2026-09-23T09:54:08.034Z"
+    },
+    {
+      "id": "draft_1790157248028_c8zqyo",
+      "candidate_id": "cand_1790157248027_k1e2do",
+      "title": "Kyoto's Hidden Machiya",
+      "subtitle": "A contemplative journey through the quiet alleys of Higashiyama, where restored wooden machiya townhouses preserve ta...",
+      "curation_tag": "Mekân ve Dinginlik",
+      "category": "SEYAHAT",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Cereal Magazine bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+      "quote": "“Güzel insanlar, güzel fikirlerle daha güzel bir dünyaya.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Cereal Magazine kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Kyoto's Hidden Machiya: Timber, Shadows, and Century-Old Tea Houses ekseninde şekillenen bu çalışma, Kyoto, Higashiyama, Machiya, Wabi-Sabi gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. A contemplative journey through the quiet alleys of Higashiyama, where restored wooden machiya townhouses preserve tactile wabi-sabi philosophy amidst modern Japan.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Cereal Magazine tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Deniz Kaya",
+      "author_role": "Kültür & Sanat Küratörü",
+      "author_avatar": "/images/editorial/author_deniz.jpg",
+      "cover_image": "/images/editorial/japan_minimalist_temple.jpg",
+      "source_name": "Cereal Magazine",
+      "source_url": "https://readcereal.com/kyotos-hidden-machiya-timber-and-shadows",
+      "tags": [
+        "seyahat",
+        "editoryal",
+        "kültür",
+        "kyoto",
+        "higashiyama",
+        "machiya"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 83,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Cereal Magazine bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Kyoto",
+            "Higashiyama",
+            "Machiya",
+            "Wabi-Sabi"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "pending_review",
+      "created_at": "2026-09-23T09:54:08.028Z",
+      "updated_at": "2026-09-23T09:54:08.028Z"
+    },
+    {
+      "id": "draft_1790157248024_g2655s",
+      "candidate_id": "cand_1790157248023_4i9i94",
+      "title": "The Art of Slow Mornings",
+      "subtitle": "Exploring how deliberate morning light, hand-dripped coffee, and analog reading hours establish an unhurried cadence ...",
+      "curation_tag": "Haftanın Keşfi",
+      "category": "WELLNESS / YAŞAM",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Gündelik hayatın telaşından sıyrılıp zamana alan açan, özenli sabah ritüellerine dair ilham verici bir bakış.",
+      "quote": "“Daha yavaş yaşadığımızda, yaşadığımızın daha fazlasını hissederiz.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Kinfolk Magazine kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "The Art of Slow Mornings: Crafting Rituals in Quiet Domestic Spaces ekseninde şekillenen bu çalışma, Kinfolk, Slow Living, Copenhagen, Rituals gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Exploring how deliberate morning light, hand-dripped coffee, and analog reading hours establish an unhurried cadence for creative professionals in Copenhagen and Kyoto.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Kinfolk Magazine tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Deniz Kaya",
+      "author_role": "Kültür & Sanat Küratörü",
+      "author_avatar": "/images/editorial/author_deniz.jpg",
+      "cover_image": "/images/editorial/slow_living_coffee_terrace.jpg",
+      "source_name": "Kinfolk Magazine",
+      "source_url": "https://kinfolk.com/the-art-of-slow-mornings-crafting-rituals",
+      "tags": [
+        "wellness / yaşam",
+        "editoryal",
+        "kültür",
+        "kinfolk",
+        "slow-living",
+        "copenhagen"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 83,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 83,
+        "signals": {
+          "cultural_value": 85,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 89
+        },
+        "editorial_angle": "Gündelik hayatın telaşından sıyrılıp zamana alan açan, özenli sabah ritüellerine dair ilham verici bir bakış.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Kinfolk",
+            "Slow Living",
+            "Copenhagen",
+            "Rituals"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "pending_review",
+      "created_at": "2026-09-23T09:54:08.024Z",
+      "updated_at": "2026-09-23T09:54:08.024Z"
+    },
+    {
+      "id": "draft_1790157248020_fob00j",
+      "candidate_id": "cand_1790157248019_mn5w8e",
+      "title": "Urla'da Taş ve Zeytin Ağaçları Arasında Monolitik Bir Atölye Evi",
+      "subtitle": "Mimar Caner Bilgin tarafından tasarlanan tek katlı taş konut, Ege rüzgarlarına göre kurgulanan iç avlusu ve ham kireç...",
+      "curation_tag": "Haftanın Keşfi",
+      "category": "MİMARİ",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Yerel dokuya saygılı mimari çizginin, mekan ve insan ruhu arasındaki dingin diyaloğunu açığa çıkarıyor.",
+      "quote": "“Bir yapı ancak etrafındaki toprağa ve zamana teslim olduğunda gerçek bir yuvaya dönüşür.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Arkitekt & Mimarlık Dergisi kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Urla'da Taş ve Zeytin Ağaçları Arasında Monolitik Bir Atölye Evi ekseninde şekillenen bu çalışma, Urla, Ege Mimarisi, Doğal Taş, İç Avlu gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Mimar Caner Bilgin tarafından tasarlanan tek katlı taş konut, Ege rüzgarlarına göre kurgulanan iç avlusu ve ham kireç sıvasıyla doğayla bütünleşen sakin bir sığınak sunuyor.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Arkitekt & Mimarlık Dergisi tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Selin Arslan",
+      "author_role": "Mimarlık & Tasarım Editörü",
+      "author_avatar": "/images/editorial/author_selin.jpg",
+      "cover_image": "/images/editorial/alacati_stone_house.jpg",
+      "source_name": "Arkitekt & Mimarlık Dergisi",
+      "source_url": "https://www.arkitekt.com.tr/projeler/urla-tas-atolye-evi",
+      "tags": [
+        "mi̇mari̇",
+        "editoryal",
+        "kültür",
+        "urla",
+        "ege-mimarisi",
+        "doğal-taş"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 87,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 87,
+        "signals": {
+          "cultural_value": 96,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 98
+        },
+        "editorial_angle": "Yerel dokuya saygılı mimari çizginin, mekan ve insan ruhu arasındaki dingin diyaloğunu açığa çıkarıyor.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Urla",
+            "Ege Mimarisi",
+            "Doğal Taş",
+            "İç Avlu"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "published",
+      "created_at": "2026-09-23T09:54:08.020Z",
+      "updated_at": "2026-09-23T11:01:28.782Z",
+      "published_at": "2026-09-23T11:01:28.782Z"
+    },
+    {
+      "id": "draft_1790157248016_sjk088",
+      "candidate_id": "cand_1790157248015_v9xnna",
+      "title": "Modernizmin Sessiz Mirası",
+      "subtitle": "Salt Galata'da açılan yeni arşiv sergisi, erken cumhuriyet döneminin taş, ahşap ve demir işçiliğiyle üretilmiş modern...",
+      "curation_tag": "Bugün 6 dakikanı ayır",
+      "category": "MİMARİ",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Yerel dokuya saygılı mimari çizginin, mekan ve insan ruhu arasındaki dingin diyaloğunu açığa çıkarıyor.",
+      "quote": "“Bir yapı ancak etrafındaki toprağa ve zamana teslim olduğunda gerçek bir yuvaya dönüşür.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Salt Online & Araştırma kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Modernizmin Sessiz Mirası: Türkiye'de 1950'ler Kamu Yapıları ve Zanaat ekseninde şekillenen bu çalışma, Salt Galata, Modernizm, Karaköy, Arşiv gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Salt Galata'da açılan yeni arşiv sergisi, erken cumhuriyet döneminin taş, ahşap ve demir işçiliğiyle üretilmiş modernist yapılarını ve detay mimarisini belgeliyor.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Salt Online & Araştırma tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Can Demir",
+      "author_role": "Edebiyat & Fikir Araştırmacısı",
+      "author_avatar": "/images/editorial/author_can.jpg",
+      "cover_image": "/images/editorial/modernist_pavilion.jpg",
+      "source_name": "Salt Online & Araştırma",
+      "source_url": "https://saltonline.org/tr/program/modernizmin-sessiz-mirasi-kamu-yapilari",
+      "tags": [
+        "mi̇mari̇",
+        "editoryal",
+        "kültür",
+        "salt-galata",
+        "modernizm",
+        "karaköy"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 88,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 88,
+        "signals": {
+          "cultural_value": 98,
+          "editorial_depth": 82,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 98
+        },
+        "editorial_angle": "Yerel dokuya saygılı mimari çizginin, mekan ve insan ruhu arasındaki dingin diyaloğunu açığa çıkarıyor.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "Salt Galata",
+            "Modernizm",
+            "Karaköy",
+            "Arşiv"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "pending_review",
+      "created_at": "2026-09-23T09:54:08.016Z",
+      "updated_at": "2026-09-23T09:54:08.016Z"
+    },
+    {
+      "id": "draft_1790157248012_9eb5jd",
+      "candidate_id": "cand_1790157248010_8s7684",
+      "title": "Yüzen Formlar ve Işığın Hafızası",
+      "subtitle": "İstanbul Modern, Akdeniz kıyılarının doğal taş, mermer ve ışık ilişkisini odağına alan yeni retrospektif sergisini zi...",
+      "curation_tag": "Haftanın Keşfi",
+      "category": "SANAT",
+      "sub_category": "Denemeler & Keşif",
+      "read_time": "5 dk okuma",
+      "why_it_matters": "Çağdaş formların malzeme hafızasıyla buluştuğu, estetik ve düşünsel derinlik barındıran güçlü bir sergi.",
+      "quote": "“Işıkla biçimlenen her form, izleyicinin içindeki sessiz odaya bir pencere açar.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. İstanbul Modern Sanat Müzesi kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Yüzen Formlar ve Işığın Hafızası: Akdeniz Çağdaş Heykel Sergisi ekseninde şekillenen bu çalışma, İstanbul Modern, Akdeniz Heykeli, Renzo Piano, Karaköy gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. İstanbul Modern, Akdeniz kıyılarının doğal taş, mermer ve ışık ilişkisini odağına alan yeni retrospektif sergisini ziyarete açtı. Doğanın zamansız geometrisiyle çağdaş formların kesişimi.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. İstanbul Modern Sanat Müzesi tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maison_perspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "author_name": "Can Demir",
+      "author_role": "Edebiyat & Fikir Araştırmacısı",
+      "author_avatar": "/images/editorial/author_can.jpg",
+      "cover_image": "/images/editorial/sculpture_terrace_view.jpg",
+      "source_name": "İstanbul Modern Sanat Müzesi",
+      "source_url": "https://www.istanbulmodern.org/sergiler/yuzen-formlar-isigin-hafizasi",
+      "tags": [
+        "sanat",
+        "editoryal",
+        "kültür",
+        "i̇stanbul-modern",
+        "akdeniz-heykeli",
+        "renzo-piano"
+      ],
+      "needs_verification": false,
+      "verification_notes": "Resmi kurum bülteniyle teyit edildi.",
+      "fit_score": 90,
+      "fit_analysis": {
+        "passed": true,
+        "overall_fit_score": 90,
+        "signals": {
+          "cultural_value": 98,
+          "editorial_depth": 90,
+          "source_quality": 78,
+          "originality": 84,
+          "timeliness": 88,
+          "maison_relevance": 98
+        },
+        "editorial_angle": "Çağdaş formların malzeme hafızasıyla buluştuğu, estetik ve düşünsel derinlik barındıran güçlü bir sergi.",
+        "rejection_reason": null,
+        "fact_check": {
+          "verified_entities": [
+            "İstanbul Modern",
+            "Akdeniz Heykeli",
+            "Renzo Piano",
+            "Karaköy"
+          ],
+          "needs_verification": false,
+          "notes": "Resmi kurum bülteniyle teyit edildi."
+        }
+      },
+      "status": "pending_review",
+      "created_at": "2026-09-23T09:54:08.012Z",
+      "updated_at": "2026-09-23T09:54:08.012Z"
+    }
+  ],
+  "published": [
+    {
+      "id": "ai_draft_1790157248071_kurye1",
+      "originalDraftId": "draft_1790157248071_kurye1",
+      "candidateId": "cand_1790157248069_v3dt24",
+      "title": "Mastering the Wheel",
+      "subtitle": "An inside look into an artist collective firing an anagama kiln continuously for seven days, allowing natural ash gla...",
+      "pillar": "OKU",
+      "type": "Editoryal Keşif",
+      "curationTag": "Editoryal Bakış",
+      "authorId": "maison_editorial",
+      "authorName": "Selin Arslan",
+      "authorRole": "Mimarlık & Tasarım Editörü",
+      "authorAvatar": "/images/editorial/author_selin.jpg",
+      "date": "23 Eylül 2026",
+      "readTime": "5 dk okuma",
+      "hasAudio": false,
+      "audioDuration": "",
+      "category": "STUDIO",
+      "subCategory": "Denemeler & Keşif",
+      "whyItMatters": "Malzemenin özüne saygı duyan zanaatkar sabrının, çağdaş tasarım diliyle kusursuz uyumu.",
+      "heroImage": "/images/editorial/dim_nesneler.jpg",
+      "quote": "“Nesnelerin ruhu, zanaatkarın sabrında ve malzemenin dürüstlüğünde saklıdır.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Crafts Council & Studio Archives kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Mastering the Wheel: Wood-Fired Ceramic Kilns and Japanese Bizen Techniques ekseninde şekillenen bu çalışma, Seramik, Anagama Fırını, Bizen, Zanaat gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. An inside look into an artist collective firing an anagama kiln continuously for seven days, allowing natural ash glazes and kiln smoke to paint unrepeatable organic patterns.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Crafts Council & Studio Archives tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maisonPerspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "sourceName": "Crafts Council & Studio Archives",
+      "sourceUrl": "https://www.craftscouncil.org.uk/stories/mastering-the-wheel-wood-fired-ceramics",
+      "tags": [
+        "studio",
+        "editoryal",
+        "kültür",
+        "seramik",
+        "anagama-fırını",
+        "bizen"
+      ],
+      "publishedAt": "2026-09-23T12:38:43.574Z",
+      "isAiCurated": true
+    },
+    {
+      "id": "ai_draft_1790157248076_966hft",
+      "originalDraftId": "draft_1790157248076_966hft",
+      "candidateId": "cand_1790157248073_5qf76v",
+      "title": "Strings Across the Silk Road",
+      "subtitle": "Exploring how modal improvisation and acoustic resonance invite stillness in contemporary concert halls from Istanbul...",
+      "pillar": "OKU",
+      "type": "Editoryal Keşif",
+      "curationTag": "Haftanın Keşfi",
+      "authorId": "maison_editorial",
+      "authorName": "Deniz Kaya",
+      "authorRole": "Kültür & Sanat Küratörü",
+      "authorAvatar": "/images/editorial/author_deniz.jpg",
+      "date": "23 Eylül 2026",
+      "readTime": "5 dk okuma",
+      "hasAudio": false,
+      "audioDuration": "",
+      "category": "MÜZİK",
+      "subCategory": "Denemeler & Keşif",
+      "whyItMatters": "Songlines & Acoustic Landscapes bülteninden derlenen, MAISON’ın daha özenli ve estetik yaşam arayışına doğrudan hitap eden kültürel keşif.",
+      "heroImage": "/images/editorial/dim_muzikler.jpg",
+      "quote": "“Güzel insanlar, güzel fikirlerle daha güzel bir dünyaya.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Songlines & Acoustic Landscapes kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Strings Across the Silk Road: The Meditative Power of Ney and Kamancheh ekseninde şekillenen bu çalışma, Ney, Kamancheh, Makam, Doğu-Batı Rezonansı gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Exploring how modal improvisation and acoustic resonance invite stillness in contemporary concert halls from Istanbul to Lyon.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Songlines & Acoustic Landscapes tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maisonPerspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "sourceName": "Songlines & Acoustic Landscapes",
+      "sourceUrl": "https://www.songlines.co.uk/features/strings-across-the-silk-road",
+      "tags": [
+        "müzi̇k",
+        "editoryal",
+        "kültür",
+        "ney",
+        "kamancheh",
+        "makam"
+      ],
+      "publishedAt": "2026-09-23T12:35:00.349Z",
+      "isAiCurated": true
+    },
+    {
+      "id": "ai_draft_1790157248020_fob00j",
+      "originalDraftId": "draft_1790157248020_fob00j",
+      "candidateId": "cand_1790157248019_mn5w8e",
+      "title": "Urla'da Taş ve Zeytin Ağaçları Arasında Monolitik Bir Atölye Evi",
+      "subtitle": "Mimar Caner Bilgin tarafından tasarlanan tek katlı taş konut, Ege rüzgarlarına göre kurgulanan iç avlusu ve ham kireç...",
+      "pillar": "OKU",
+      "type": "Editoryal Keşif",
+      "curationTag": "Haftanın Keşfi",
+      "authorId": "maison_editorial",
+      "authorName": "Selin Arslan",
+      "authorRole": "Mimarlık & Tasarım Editörü",
+      "authorAvatar": "/images/editorial/architect_selin.jpg",
+      "date": "23 Eylül 2026",
+      "readTime": "5 dk okuma",
+      "hasAudio": false,
+      "audioDuration": "",
+      "category": "MİMARİ",
+      "subCategory": "Denemeler & Keşif",
+      "whyItMatters": "Yerel dokuya saygılı mimari çizginin, mekan ve insan ruhu arasındaki dingin diyaloğunu açığa çıkarıyor.",
+      "heroImage": "/images/editorial/architecture_arched.jpg",
+      "quote": "“Bir yapı ancak etrafındaki toprağa ve zamana teslim olduğunda gerçek bir yuvaya dönüşür.”",
+      "excerpt": "Kültürel hafızamızın en değerli katmanları, çoğu zaman gürültülü iddialardan değil; sessiz, özenli ve zamanın akışına direnen pratiklerden doğuyor. Arkitekt & Mimarlık Dergisi kaynaklı bu güncel keşif, bizi gündelik telaşların ötesinde bir duraklamaya davet ediyor.",
+      "body": [
+        "Urla'da Taş ve Zeytin Ağaçları Arasında Monolitik Bir Atölye Evi ekseninde şekillenen bu çalışma, Urla, Ege Mimarisi, Doğal Taş, İç Avlu gibi kurucu unsurları bir araya getirerek hem geleneksel zanaat disiplinlerine hem de çağdaş estetik sorgulamalara taze bir nefes kazandırıyor. Mimar Caner Bilgin tarafından tasarlanan tek katlı taş konut, Ege rüzgarlarına göre kurgulanan iç avlusu ve ham kireç sıvasıyla doğayla bütünleşen sakin bir sığınak sunuyor.",
+        "Burada karşımıza çıkan estetik tavır, yalnızca bir sergileme veya biçim arayışı değil; mekanla, ışıkla ve insan ölçeğiyle kurulan samimi bir uzlaşıdır. Nesnelerin ya da mekanın sadeliği, izleyiciye kendi zihinsel alanını yeniden kurgulama imkânı sunuyor.",
+        "Modern kent yaşamının hız ve tüketim sarmalında, böylesi nitelikli editoryal ve sanatsal adımlar birer lüks değil; zihinsel berraklığımız için vazgeçilmez birer sığınaktır. Arkitekt & Mimarlık Dergisi tarafından sunulan bu kayıt, geleceğe bırakılan kıymetli bir kültürel belge niteliğinde."
+      ],
+      "maisonPerspective": "MAISON, gündelik ritüellerin ve yaşam alanlarının insanın iç dünyasını biçimlendirdiğine inanır. Bu keşif; daha az şeye sahip olup onlarla daha derin bağlar kurmanın, bir sergiyi ya da yapıyı sadece tüketmek yerine onun sessizliğinde dinlenmenin ne denli dönüştürücü olduğunu bir kez daha kanıtlıyor.",
+      "sourceName": "Arkitekt & Mimarlık Dergisi",
+      "sourceUrl": "https://www.arkitekt.com.tr/projeler/urla-tas-atolye-evi",
+      "tags": [
+        "mi̇mari̇",
+        "editoryal",
+        "kültür",
+        "urla",
+        "ege-mimarisi",
+        "doğal-taş"
+      ],
+      "publishedAt": "2026-09-23T11:01:28.781Z",
+      "isAiCurated": true
+    }
+  ],
+  "rejected": [
+    {
+      "id": "draft_1790157248060_4and74",
+      "type": "draft",
+      "title": "Cast Bronze and Raw Linen",
+      "source": "Dezeen & Design Craft",
+      "reason": "MAISON editoryal standardına uygun bulunmadı",
+      "rejected_at": "2026-09-23T12:42:01.797Z"
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "run_1790650800003",
+      "started_at": "2026-09-29T03:00:00.003Z",
+      "finished_at": "2026-09-29T03:00:00.048Z",
+      "duration_ms": 45,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790650797583",
+      "started_at": "2026-09-29T02:59:57.584Z",
+      "finished_at": "2026-09-29T02:59:57.652Z",
+      "duration_ms": 68,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790564400003",
+      "started_at": "2026-09-28T03:00:00.003Z",
+      "finished_at": "2026-09-28T03:00:00.046Z",
+      "duration_ms": 43,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790564397785",
+      "started_at": "2026-09-28T02:59:57.786Z",
+      "finished_at": "2026-09-28T02:59:57.861Z",
+      "duration_ms": 75,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790478000003",
+      "started_at": "2026-09-27T03:00:00.003Z",
+      "finished_at": "2026-09-27T03:00:00.043Z",
+      "duration_ms": 40,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790477998007",
+      "started_at": "2026-09-27T02:59:58.008Z",
+      "finished_at": "2026-09-27T02:59:58.077Z",
+      "duration_ms": 69,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790391622297",
+      "started_at": "2026-09-26T03:00:22.298Z",
+      "finished_at": "2026-09-26T03:00:22.356Z",
+      "duration_ms": 58,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790327820969",
+      "started_at": "2026-09-25T09:17:00.973Z",
+      "finished_at": "2026-09-25T09:17:01.344Z",
+      "duration_ms": 372,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790219353143",
+      "started_at": "2026-09-24T03:09:13.143Z",
+      "finished_at": "2026-09-24T03:09:13.196Z",
+      "duration_ms": 53,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790167138003",
+      "started_at": "2026-09-23T12:38:58.003Z",
+      "finished_at": "2026-09-23T12:38:58.021Z",
+      "duration_ms": 18,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790166939324",
+      "started_at": "2026-09-23T12:35:39.324Z",
+      "finished_at": "2026-09-23T12:35:39.382Z",
+      "duration_ms": 58,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790157261533",
+      "started_at": "2026-09-23T09:54:21.533Z",
+      "finished_at": "2026-09-23T09:54:21.546Z",
+      "duration_ms": 13,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 12,
+      "candidates_created": 0,
+      "drafts_generated": 0,
+      "errors": []
+    },
+    {
+      "run_id": "run_1790157248005",
+      "started_at": "2026-09-23T09:54:08.005Z",
+      "finished_at": "2026-09-23T09:54:08.077Z",
+      "duration_ms": 72,
+      "sources_checked": 12,
+      "items_found": 12,
+      "duplicates_filtered": 0,
+      "candidates_created": 12,
+      "drafts_generated": 12,
+      "errors": []
+    }
+  ]
+}

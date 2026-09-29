@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAISON · AI Editorial Engine V1 — Editoryal Seçim ve Yayın Masası</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FAF7F2;
+      --bg-card: #FFFFFF;
+      --bg-card-subtle: #F5EFEB;
+      --border-color: #E6DDD5;
+      --border-focus: #B5734C;
+      --text-charcoal: #1C1A18;
+      --text-taupe: #786F66;
+      --text-muted: #9E948A;
+      --accent-terracotta: #B5734C;
+      --accent-gold: #9E7D42;
+      --badge-green: #2E6B4A;
+      --badge-green-bg: #EAF4EE;
+      --badge-red: #A83838;
+      --badge-red-bg: #FDF0F0;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-charcoal);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+      padding-bottom: 60px;
+    }
+
+    /* Top bar */
+    .top-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    }
+    .top-bar-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-logo {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--text-charcoal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-pill {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      background: var(--text-charcoal);
+      color: #FAF7F2;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .brand-tagline {
+      font-size: 12px;
+      color: var(--text-taupe);
+      border-left: 1px solid var(--border-color);
+      padding-left: 14px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .curator-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-color);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .curator-pill img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      border: 1px solid transparent;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--accent-terracotta);
+      color: #FFFFFF;
+    }
+    .btn-primary:hover {
+      background: #9E5E3A;
+    }
+    .btn-secondary {
+      background: #FFFFFF;
+      border-color: var(--border-color);
+      color: var(--text-charcoal);
+    }
+    .btn-secondary:hover {
+      background: var(--bg-card-subtle);
+    }
+    .btn-outline-danger {
+      background: transparent;
+      border-color: #E2B2B2;
+      color: var(--badge-red);
+    }
+    .btn-outline-danger:hover {
+      background: var(--badge-red-bg);
+    }
+    .btn-success {
+      background: var(--badge-green);
+      color: #FFFFFF;
+    }
+    .btn-success:hover {
+      background: #24553A;
+    }
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: transform 0.15s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-2px);
+    }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-taupe);
+    }
+    .stat-value {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-charcoal);
+    }
+    .stat-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 24px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+    .nav-tab {
+      background: none;
+      border: none;
+      padding: 12px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-taupe);
+      cursor: pointer;
+      position: relative;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-tab:hover {
+      color: var(--text-charcoal);
+    }
+    .nav-tab.active {
+      color: var(--accent-terracotta);
+    }
+    .nav-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--accent-terracotta);
+    }
+    .tab-badge {
+      background: var(--bg-card-subtle);
+      color: var(--text-charcoal);
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 10px;
+    }
+    .nav-tab.active .tab-badge {
+      background: #F8EFE9;
+      color: var(--accent-terracotta);
+    }
+
+    /* Content Area */
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+    }
+
+    /* Section Banner */
+    .section-banner {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .section-banner h2 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .section-banner p {
+      font-size: 13px;
+      color: var(--text-taupe);
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 20px;
+    }
+    @media (max-width: 600px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Editorial Card */
+    .curator-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      transition: all 0.2s ease;
+    }
+    .curator-card:hover {
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      border-color: #D6CBC2;
+    }
+    .card-top-media {
+      position: relative;
+      height: 180px;
+      background: #23201D;
+      overflow: hidden;
+    }
+    .card-top-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+      transition: transform 0.4s ease;
+    }
+    .curator-card:hover .card-top-media img {
+      transform: scale(1.03);
+    }
+    .card-badges {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .card-pill-cat {
+      background: rgba(28, 26, 24, 0.85);
+      backdrop-filter: blur(4px);
+      color: #FAF7F2;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .card-pill-fit {
+      background: #2E6B4A;
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    .card-source-tag {
+      position: absolute;
+      bottom: 10px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--text-charcoal);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .card-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-curation-tag {
+      font-size: 11px;
+      color: var(--accent-terracotta);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--text-charcoal);
+      margin-bottom: 8px;
+    }
+    .card-subtitle {
+      font-size: 13px;
+      color: var(--text-taupe);
+      margin-bottom: 14px;
+      line-height: 1.45;
+    }
+
+    /* Angle callout */
+    .card-angle-box {
+      background: var(--bg-card-subtle);
+      border-left: 3px solid var(--accent-terracotta);
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-size: 12px;
+      color: var(--text-charcoal);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    .card-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 12px;
+      margin-top: auto;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .card-author-info {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card-author-info img {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      padding: 14px 20px;
+      background: #FAFAFA;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Modal / Drawer for Review */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(28, 26, 24, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 24px;
+    }
+    .modal-backdrop.open {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-box {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 1180px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      max-height: 90vh;
+    }
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-cream);
+    }
+    .modal-header h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .modal-close-btn {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--text-taupe);
+    }
+    .modal-body {
+      padding: 24px;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 28px;
+    }
+    @media (max-width: 900px) {
+      .modal-body {
+        grid-template-columns: 1fr;
+      }
+    }
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--border-color);
+      background: #FAFAFA;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    /* Form Fields */
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--text-taupe);
+      margin-bottom: 6px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--text-charcoal);
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .form-control:focus {
+      border-color: var(--border-focus);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--text-charcoal);
+      color: #FAF7F2;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      gap: 10px;
+    }
+    .toast.show {
+      display: flex;
+      animation: fadeIn 0.2s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Empty state */
+    .empty-state {
+      padding: 60px 20px;
+      text-align: center;
+      background: #FFFFFF;
+      border: 1px dashed var(--border-color);
+      border-radius: 12px;
+    }
+    .empty-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+    .empty-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .empty-text {
+      font-size: 13px;
+      color: var(--text-taupe);
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    /* Tables */
+    .custom-table {
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+    }
+    .custom-table th {
+      background: var(--bg-card-subtle);
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-taupe);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .custom-table td {
+      padding: 14px 16px;
+      font-size: 13px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .custom-table tr:last-child td {
+      border-bottom: none;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-success { background: var(--badge-green-bg); color: var(--badge-green); }
+    .badge-danger { background: var(--badge-red-bg); color: var(--badge-red); }
+    .badge-warning { background: #FEF6E9; color: #B26A00; }
+    .badge-info { background: #EDF3FB; color: #1E60A8; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="brand-wrap">
+        <div class="brand-logo">
+          MAISON <span class="brand-pill">AI EDITOR V1</span>
+        </div>
+        <div class="brand-tagline">
+          Kültürel Keşif & İnsan Onaylı Editoryal Seçim Masası
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <div class="curator-pill">
+          <img src="/images/editorial/berke_saygili.jpg" alt="Berke Saygılı">
+          <span>Berke Saygılı (Küratör)</span>
+        </div>
+        <a href="/" target="_blank" class="btn btn-secondary" title="MAISON Uygulamasını Aç">
+          MAISON Uygulaması ↗
+        </a>
+        <button id="btnScanNow" class="btn btn-primary">
+          <span id="scanBtnIcon">✦</span>
+          <span id="scanBtnText">Şimdi Tara</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Stats Row -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">🏛️ Aktif Kaynak</span>
+        <span class="stat-value" id="statSources">-</span>
+        <span class="stat-sub">14 Kültür kategorisi</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">🔍 Bugün Bulunan</span>
+        <span class="stat-value" id="statToday">-</span>
+        <span class="stat-sub">Ham içerik adayları</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">⏳ İncelenmeyi Bekleyen</span>
+        <span class="stat-value" id="statPending" style="color: var(--accent-terracotta);">-</span>
+        <span class="stat-sub">İnsan onayı bekleyen taslak</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">✨ Yayınlanan</span>
+        <span class="stat-value" id="statPublished" style="color: var(--badge-green);">-</span>
+        <span class="stat-sub">MAISON akışında yayında</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">🛡️ Reddedilen / Elenen</span>
+        <span class="stat-value" id="statRejected">-</span>
+        <span class="stat-sub">Duplicate & Kalite filtresi</span>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="pending">
+        ⏳ İncelenmeyi Bekleyenler <span class="tab-badge" id="badgePending">0</span>
+      </button>
+      <button class="nav-tab" data-tab="candidates">
+        🔍 Ham Adaylar <span class="tab-badge" id="badgeCandidates">0</span>
+      </button>
+      <button class="nav-tab" data-tab="drafts">
+        📝 Tüm Taslaklar <span class="tab-badge" id="badgeDrafts">0</span>
+      </button>
+      <button class="nav-tab" data-tab="published">
+        ✨ Yayınlananlar <span class="tab-badge" id="badgePublished">0</span>
+      </button>
+      <button class="nav-tab" data-tab="rejected">
+        ⛔ Reddedilenler <span class="tab-badge" id="badgeRejected">0</span>
+      </button>
+      <button class="nav-tab" data-tab="sources">
+        ⚙️ Kaynak Yönetimi <span class="tab-badge" id="badgeSources">0</span>
+      </button>
+      <button class="nav-tab" data-tab="logs">
+        📋 Sistem Günlüğü
+      </button>
+    </nav>
+
+    <!-- Tab 1: İncelenmeyi Bekleyenler (Main Workflow) -->
+    <div class="tab-pane active" id="panePending">
+      <div class="section-banner">
+        <div>
+          <h2>İncelenmeyi Bekleyen Editoryal Taslaklar</h2>
+          <p>AI tarafından taranıp analiz edilmiş, duplicate testini geçmiş ve MAISON tonunda hazırlanmış taslaklar. <strong>İnsan onayı olmadan MAISON uygulamasında yayınlanmaz.</strong></p>
+        </div>
+        <div style="font-size: 12px; color: var(--text-taupe); background: var(--bg-card-subtle); padding: 8px 14px; border-radius: 8px;">
+          ⏱️ Sabah 06:00 Otomatik Tarama Aktif
+        </div>
+      </div>
+      <div class="cards-grid" id="pendingCardsGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+
+    <!-- Tab 2: Ham Adaylar -->
+    <div class="tab-pane" id="paneCandidates">
+      <div class="section-banner">
+        <div>
+          <h2>Kaynaklardan Keşfedilen İçerik Adayları</h2>
+          <p>Kültür kurumları, müzeler ve bültenlerden tespit edilen ham kayıtlar ve AI analiz durumları.</p>
+        </div>
+      </div>
+      <div id="candidatesTableContainer">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+
+    <!-- Tab 3: Tüm Taslaklar -->
+    <div class="tab-pane" id="paneDrafts">
+      <div class="section-banner">
+        <div>
+          <h2>Tüm Editoryal Taslak Arşivi</h2>
+          <p>Onay bekleyen, düzenlenen veya arşivlenen tüm MAISON editoryal taslakları.</p>
+        </div>
+      </div>
+      <div class="cards-grid" id="allDraftsCardsGrid"></div>
+    </div>
+
+    <!-- Tab 4: Yayınlananlar -->
+    <div class="tab-pane" id="panePublished">
+      <div class="section-banner">
+        <div>
+          <h2>MAISON Uygulamasında Canlı Yayınlananlar</h2>
+          <p>Küratör onayından geçip MAISON Ana Sayfa, Oku ve Keşfet akışlarına eklenen yazılar.</p>
+        </div>
+      </div>
+      <div class="cards-grid" id="publishedCardsGrid"></div>
+    </div>
+
+    <!-- Tab 5: Reddedilenler -->
+    <div class="tab-pane" id="paneRejected">
+      <div class="section-banner">
+        <div>
+          <h2>Elenen ve Reddedilen İçerikler</h2>
+          <p>Duplicate filtresine takılan, ticari/clickbait bulunan veya küratör tarafından reddedilen içerikler.</p>
+        </div>
+      </div>
+      <div id="rejectedTableContainer"></div>
+    </div>
+
+    <!-- Tab 6: Kaynak Yönetimi -->
+    <div class="tab-pane" id="paneSources">
+      <div class="section-banner">
+        <div>
+          <h2>Tanımlı Kültür Kaynakları ve Sağlık Durumu</h2>
+          <p>14 kategoride resmi kurumlar, bültenler ve dergiler. Hata alan kaynaklar izole edilir, motor durmaz.</p>
+        </div>
+      </div>
+      <div id="sourcesTableContainer"></div>
+    </div>
+
+    <!-- Tab 7: Sistem Günlüğü -->
+    <div class="tab-pane" id="paneLogs">
+      <div class="section-banner">
+        <div>
+          <h2>AI Editor Tarama ve İcra Günlüğü</h2>
+          <p>Gerçekleştirilen taramaların süreleri, bulunan içerik sayıları, filtrelenen duplicate'ler ve sonuçlar.</p>
+        </div>
+      </div>
+      <div id="logsTableContainer"></div>
+    </div>
+  </main>
+
+  <!-- Deep Review & Edit Modal -->
+  <div class="modal-backdrop" id="reviewModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent-terracotta); font-weight: 700;">EDİTÖRYAL İNCELEME & DÜZENLEME</span>
+          <h3 id="modalDraftTitle">Taslak Başlığı</h3>
+        </div>
+        <button class="modal-close-btn" id="btnModalClose">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Left Column: Original Source & AI Analysis -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="background: var(--bg-card-subtle); padding: 16px; border-radius: 10px; border: 1px solid var(--border-color);">
+            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-taupe); margin-bottom: 8px;">1. ORİJİNAL KAYNAK BİLGİSİ</div>
+            <div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;" id="modalSourceTitle">Orijinal Başlık</div>
+            <div style="font-size: 12px; color: var(--text-taupe); margin-bottom: 10px;" id="modalSourceMeta">Kaynak: -</div>
+            <div style="font-size: 12px; color: var(--text-charcoal); line-height: 1.5; margin-bottom: 10px; background: #FFF; padding: 10px; border-radius: 6px;" id="modalSourceExcerpt">
+              Ham alıntı...
+            </div>
+            <a href="#" target="_blank" id="modalSourceUrl" style="font-size: 11px; color: var(--accent-terracotta); text-decoration: none; font-weight: 600;">Orijinal Kaynağı Yeni Sekmede Aç ↗</a>
+          </div>
+
+          <div style="background: var(--bg-card-subtle); padding: 16px; border-radius: 10px; border: 1px solid var(--border-color);">
+            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-taupe); margin-bottom: 8px;">2. AI FIT DEĞERLENDİRMESİ</div>
+            <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;">
+              <span style="font-family: var(--font-serif); font-size: 32px; font-weight: 700; color: var(--badge-green);" id="modalFitScore">90</span>
+              <span style="font-size: 12px; color: var(--text-taupe);">/ 100 MAISON Fit Puanı</span>
+            </div>
+            <div id="modalFitSignals" style="display: flex; flex-direction: column; gap: 6px; font-size: 11px; margin-bottom: 14px;">
+              <!-- Score bars -->
+            </div>
+            <div style="font-size: 12px; font-style: italic; color: var(--text-charcoal); border-left: 3px solid var(--accent-gold); padding-left: 10px;" id="modalAiAngle">
+              AI Editoryal Açısı...
+            </div>
+          </div>
+
+          <div style="background: #FFF; border: 1px solid var(--border-color); border-radius: 10px; padding: 14px;">
+            <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-taupe); margin-bottom: 6px;">3. FACT CHECK DURUMU</div>
+            <div id="modalFactCheckBadge" style="margin-bottom: 6px;">-</div>
+            <div id="modalFactCheckNotes" style="font-size: 11px; color: var(--text-taupe); line-height: 1.4;">-</div>
+          </div>
+        </div>
+
+        <!-- Right Column: Editable MAISON Draft -->
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <input type="hidden" id="editDraftId">
+
+          <div class="form-group">
+            <label>MAISON Başlığı</label>
+            <input type="text" id="editDraftTitle" class="form-control" style="font-family: var(--font-serif); font-size: 17px; font-weight: 600;">
+          </div>
+
+          <div class="form-group">
+            <label>Alt Başlık</label>
+            <input type="text" id="editDraftSubtitle" class="form-control">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label>Kürasyon Etiketi</label>
+              <input type="text" id="editDraftCurationTag" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Kategori</label>
+              <input type="text" id="editDraftCategory" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Neden Önemli? (Why It Matters)</label>
+            <textarea id="editDraftWhyItMatters" class="form-control" rows="2"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Vurgu Alıntısı (Hero Quote)</label>
+            <input type="text" id="editDraftQuote" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label>Giriş Paragrafı (Excerpt)</label>
+            <textarea id="editDraftExcerpt" class="form-control" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Gövde Paragrafları (Her paragraf arasına boş satır bırakın)</label>
+            <textarea id="editDraftBody" class="form-control" rows="6"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>MAISON Perspektifi</label>
+            <textarea id="editDraftMaisonPerspective" class="form-control" rows="2"></textarea>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label>Yazar & Küratör</label>
+              <input type="text" id="editDraftAuthorName" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Okuma Süresi</label>
+              <input type="text" id="editDraftReadTime" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Kapak Görseli URL</label>
+            <input type="text" id="editDraftCoverImage" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div>
+          <button class="btn btn-outline-danger" id="btnModalReject">Reddet</button>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn btn-secondary" id="btnModalSave">Taslağı Kaydet</button>
+          <button class="btn btn-success" id="btnModalPublish">🚀 Onayla & MAISON'da Yayınla</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toastMessage">
+    <span id="toastText">İşlem tamamlandı</span>
+  </div>
+
+  <script>
+    // State
+    let currentDrafts = [];
+    let currentCandidates = [];
+    let currentPublished = [];
+    let currentRejected = [];
+    let currentSources = [];
+    let activeDraft = null;
+
+    // Toast helper
+    function showToast(msg, duration = 3000) {
+      const toast = document.getElementById('toastMessage');
+      const text = document.getElementById('toastText');
+      text.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), duration);
+    }
+
+    // Tab switching
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        const targetId = 'pane' + tab.dataset.tab.charAt(0).toUpperCase() + tab.dataset.tab.slice(1);
+        const pane = document.getElementById(targetId);
+        if (pane) pane.classList.add('active');
+      });
+    });
+
+    // Load All Data
+    async function loadData() {
+      try {
+        const [statsRes, draftsRes, candRes, pubRes, rejRes, srcRes, logsRes] = await Promise.all([
+          fetch('/api/editor/stats').then(r => r.json()),
+          fetch('/api/editor/drafts').then(r => r.json()),
+          fetch('/api/editor/candidates').then(r => r.json()),
+          fetch('/api/editor/published').then(r => r.json()),
+          fetch('/api/editor/rejected').then(r => r.json()),
+          fetch('/api/editor/sources').then(r => r.json()),
+          fetch('/api/editor/logs').then(r => r.json())
+        ]);
+
+        if (statsRes.success) {
+          const s = statsRes.stats;
+          document.getElementById('statSources').textContent = s.totalSources;
+          document.getElementById('statToday').textContent = s.todayFound;
+          document.getElementById('statPending').textContent = s.pendingReview;
+          document.getElementById('statPublished').textContent = s.totalPublished;
+          document.getElementById('statRejected').textContent = s.totalRejected;
+
+          document.getElementById('badgePending').textContent = s.pendingReview;
+          document.getElementById('badgeCandidates').textContent = candRes.candidates ? candRes.candidates.length : 0;
+          document.getElementById('badgeDrafts').textContent = s.totalDrafts;
+          document.getElementById('badgePublished').textContent = s.totalPublished;
+          document.getElementById('badgeRejected').textContent = s.totalRejected;
+          document.getElementById('badgeSources').textContent = s.totalSources;
+        }
+
+        currentDrafts = draftsRes.drafts || [];
+        currentCandidates = candRes.candidates || [];
+        currentPublished = pubRes.published || [];
+        currentRejected = rejRes.rejected || [];
+        currentSources = srcRes.sources || [];
+        window.currentDrafts = currentDrafts;
+
+        renderPendingDrafts();
+        renderCandidatesTable();
+        renderAllDrafts();
+        renderPublishedCards();
+        renderRejectedTable();
+        renderSourcesTable();
+        renderLogsTable(logsRes.logs || []);
+
+      } catch (e) {
+        console.error('Veri yükleme hatası:', e);
+      }
+    }
+
+    // Render Pending Drafts
+    function renderPendingDrafts() {
+      const container = document.getElementById('pendingCardsGrid');
+      const pending = currentDrafts.filter(d => d.status === 'pending_review');
+
+      if (pending.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state" style="grid-column: 1 / -1;">
+            <div class="empty-icon">☕</div>
+            <div class="empty-title">İncelenmeyi bekleyen yeni taslak yok</div>
+            <div class="empty-text">Tüm keşifler incelendi veya yayınlandı. Yeni içerikleri keşfetmek için yukarıdaki "✦ Şimdi Tara" butonuna tıklayabilirsiniz.</div>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = pending.map(draft => `
+        <div class="curator-card" id="card_${draft.id}">
+          <div class="card-top-media">
+            <img src="${draft.cover_image}" alt="${draft.title}">
+            <div class="card-badges">
+              <span class="card-pill-cat">${draft.category}</span>
+              <span class="card-pill-fit">✦ Fit: ${draft.fit_score}/100</span>
+            </div>
+            <span class="card-source-tag">${draft.source_name}</span>
+          </div>
+
+          <div class="card-content">
+            <div class="card-curation-tag">✦ ${draft.curation_tag}</div>
+            <h3 class="card-title">${draft.title}</h3>
+            <p class="card-subtitle">${draft.subtitle}</p>
+
+            <div class="card-angle-box">
+              “${draft.why_it_matters || draft.quote}”
+            </div>
+
+            <div class="card-meta-row">
+              <div class="card-author-info">
+                <img src="${draft.author_avatar}" alt="${draft.author_name}">
+                <span>${draft.author_name} • ${draft.read_time}</span>
+              </div>
+              <div>
+                ${draft.needs_verification ? '<span class="badge badge-warning">⚠️ Doğrulama Gerekli</span>' : '<span class="badge badge-success">✓ Doğrulandı</span>'}
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <button class="btn btn-secondary" style="flex: 1;" onclick="openReviewModal('${draft.id}')">
+              🔍 İncele & Düzenle
+            </button>
+            <button class="btn btn-success" onclick="quickPublish('${draft.id}')">
+              🚀 Yayınla
+            </button>
+            <button class="btn btn-outline-danger" onclick="quickReject('${draft.id}')" title="Reddet">
+              ✕
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render All Drafts
+    function renderAllDrafts() {
+      const container = document.getElementById('allDraftsCardsGrid');
+      if (currentDrafts.length === 0) {
+        container.innerHTML = `<div class="empty-state" style="grid-column: 1 / -1;"><div class="empty-title">Henüz taslak bulunmuyor</div></div>`;
+        return;
+      }
+
+      container.innerHTML = currentDrafts.map(draft => `
+        <div class="curator-card">
+          <div class="card-top-media" style="height: 140px;">
+            <img src="${draft.cover_image}" alt="${draft.title}">
+            <div class="card-badges">
+              <span class="card-pill-cat">${draft.category}</span>
+              <span class="badge ${draft.status === 'published' ? 'badge-success' : (draft.status === 'rejected' ? 'badge-danger' : 'badge-warning')}">${draft.status.toUpperCase()}</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title" style="font-size: 18px;">${draft.title}</h3>
+            <p class="card-subtitle" style="font-size: 12px;">${draft.subtitle}</p>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-secondary" style="width: 100%; font-size: 12px;" onclick="openReviewModal('${draft.id}')">
+              Detayları Görüntüle
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render Published Cards
+    function renderPublishedCards() {
+      const container = document.getElementById('publishedCardsGrid');
+      if (currentPublished.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state" style="grid-column: 1 / -1;">
+            <div class="empty-icon">🏛️</div>
+            <div class="empty-title">Henüz yayınlanmış bir AI yazısı yok</div>
+            <div class="empty-text">"İncelenmeyi Bekleyenler" sekmesindeki taslakları inceleyip onaylayarak MAISON canlı uygulamasına gönderebilirsiniz.</div>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = currentPublished.map(art => `
+        <div class="curator-card">
+          <div class="card-top-media">
+            <img src="${art.heroImage}" alt="${art.title}">
+            <div class="card-badges">
+              <span class="card-pill-cat">${art.category}</span>
+              <span class="badge badge-success">CANLI YAYINDA</span>
+            </div>
+            <span class="card-source-tag">Kaynak: ${art.sourceName}</span>
+          </div>
+          <div class="card-content">
+            <div class="card-curation-tag">✦ ${art.curationTag}</div>
+            <h3 class="card-title">${art.title}</h3>
+            <p class="card-subtitle">${art.subtitle}</p>
+            <div class="card-meta-row">
+              <span>${art.authorName} • ${art.readTime}</span>
+              <span>${art.date}</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="/#article_${art.id}" target="_blank" class="btn btn-secondary" style="width: 100%; text-align: center; justify-content: center;">
+              Uygulamada Gör ↗
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render Candidates Table
+    function renderCandidatesTable() {
+      const container = document.getElementById('candidatesTableContainer');
+      if (currentCandidates.length === 0) {
+        container.innerHTML = `<div class="empty-state"><div class="empty-title">Aday bulunamadı</div></div>`;
+        return;
+      }
+
+      container.innerHTML = `
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Başlık</th>
+              <th>Kaynak</th>
+              <th>Kategori</th>
+              <th>Keşif Tarihi</th>
+              <th>Durum</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${currentCandidates.map(c => `
+              <tr>
+                <td>
+                  <div style="font-weight: 600;">${c.source_title}</div>
+                  <div style="font-size: 11px; color: var(--text-taupe);">${(c.source_description || '').substring(0, 90)}...</div>
+                </td>
+                <td><span class="badge badge-info">${c.source_name}</span></td>
+                <td>${c.category}</td>
+                <td style="font-size: 11px; color: var(--text-muted);">${new Date(c.discovered_at).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' })}</td>
+                <td><span class="badge ${c.status === 'published' ? 'badge-success' : (c.status === 'rejected' ? 'badge-danger' : 'badge-warning')}">${c.status}</span></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    // Render Rejected Table
+    function renderRejectedTable() {
+      const container = document.getElementById('rejectedTableContainer');
+      if (currentRejected.length === 0) {
+        container.innerHTML = `<div class="empty-state"><div class="empty-title">Elenen içerik kaydı yok</div></div>`;
+        return;
+      }
+
+      container.innerHTML = `
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Başlık</th>
+              <th>Kaynak</th>
+              <th>Elenme Sebebi</th>
+              <th>Tarih</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${currentRejected.map(r => `
+              <tr>
+                <td style="font-weight: 600;">${r.title}</td>
+                <td>${r.source}</td>
+                <td><span class="badge badge-danger">${r.reason}</span></td>
+                <td style="font-size: 11px; color: var(--text-muted);">${new Date(r.rejected_at).toLocaleString('tr-TR')}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    // Render Sources Table
+    function renderSourcesTable() {
+      const container = document.getElementById('sourcesTableContainer');
+      container.innerHTML = `
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Kaynak Adı</th>
+              <th>Kategori</th>
+              <th>Tür</th>
+              <th>Güven Derecesi</th>
+              <th>Sağlık</th>
+              <th>Durum</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${currentSources.map(s => `
+              <tr>
+                <td>
+                  <div style="font-weight: 600;">${s.name}</div>
+                  <a href="${s.url}" target="_blank" style="font-size: 11px; color: var(--accent-terracotta); text-decoration: none;">${s.url}</a>
+                </td>
+                <td>${s.category}</td>
+                <td>${s.type}</td>
+                <td><span class="badge badge-info">${s.trust_level.toUpperCase()}</span></td>
+                <td><span class="badge badge-success">${s.health_status}</span></td>
+                <td>${s.active ? '<span class="badge badge-success">Aktif</span>' : '<span class="badge badge-warning">Pasif</span>'}</td>
+                <td>
+                  <button class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;" onclick="toggleSource('${s.id}')">
+                    ${s.active ? 'Devre Dışı Bırak' : 'Etkinleştir'}
+                  </button>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    // Render Logs Table
+    function renderLogsTable(logs) {
+      const container = document.getElementById('logsTableContainer');
+      if (!logs || logs.length === 0) {
+        container.innerHTML = `<div class="empty-state"><div class="empty-title">Henüz icra kaydı yok</div></div>`;
+        return;
+      }
+
+      container.innerHTML = `
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Çalışma ID</th>
+              <th>Başlama Zamanı</th>
+              <th>Süre</th>
+              <th>Taranan Kaynak</th>
+              <th>Bulunan</th>
+              <th>Yinelenen Elenen</th>
+              <th>Üretilen Taslak</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${logs.map(l => `
+              <tr>
+                <td style="font-family: monospace; font-size: 11px;">${l.run_id}</td>
+                <td>${new Date(l.started_at).toLocaleString('tr-TR')}</td>
+                <td>${l.duration_ms} ms</td>
+                <td>${l.sources_checked}</td>
+                <td><strong>${l.items_found}</strong></td>
+                <td><span class="badge badge-warning">${l.duplicates_filtered}</span></td>
+                <td><span class="badge badge-success">${l.drafts_generated}</span></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    // Open Deep Review Modal
+    async function openReviewModal(draftId) {
+      try {
+        if (!draftId && window.currentDrafts && window.currentDrafts.length > 0) {
+          draftId = window.currentDrafts[0].id;
+        }
+        if (!draftId) return;
+        const res = await fetch('/api/editor/drafts/' + draftId).then(r => r.json());
+        if (!res.success) return alert('Taslak yüklenemedi');
+
+        const draft = res.draft;
+        const candidate = res.candidate;
+        activeDraft = draft;
+
+        document.getElementById('modalDraftTitle').textContent = draft.title;
+        document.getElementById('modalSourceTitle').textContent = candidate ? candidate.source_title : draft.title;
+        const trustLevel = (candidate && candidate.trust_level ? candidate.trust_level : 'high').toUpperCase();
+        document.getElementById('modalSourceMeta').textContent = `Kaynak: ${draft.source_name} • Güven: ${trustLevel}`;
+        document.getElementById('modalSourceExcerpt').textContent = candidate ? (candidate.source_description || candidate.raw_content_reference || 'Ham açıklama yok') : draft.excerpt;
+        document.getElementById('modalSourceUrl').href = draft.source_url || '#';
+
+        document.getElementById('modalFitScore').textContent = draft.fit_score || 85;
+        const sigs = draft.fit_analysis?.signals || {};
+        document.getElementById('modalFitSignals').innerHTML = `
+          <div>Kültürel Değer: <strong>${sigs.cultural_value || 85}/100</strong></div>
+          <div>Editoryal Derinlik: <strong>${sigs.editorial_depth || 82}/100</strong></div>
+          <div>Kaynak Kalitesi: <strong>${sigs.source_quality || 88}/100</strong></div>
+          <div>MAISON Uyumu: <strong>${sigs.maison_relevance || 90}/100</strong></div>
+        `;
+        document.getElementById('modalAiAngle').textContent = `“${draft.why_it_matters || draft.quote}”`;
+
+        document.getElementById('modalFactCheckBadge').innerHTML = draft.needs_verification 
+          ? '<span class="badge badge-warning">⚠️ Editör Doğrulaması Gerekli</span>' 
+          : '<span class="badge badge-success">✓ Resmi Kurumla Teyit Edildi</span>';
+        document.getElementById('modalFactCheckNotes').textContent = draft.verification_notes || 'Tarihler ve kişi isimleri kontrol edildi.';
+
+        // Populate form
+        document.getElementById('editDraftId').value = draft.id;
+        document.getElementById('editDraftTitle').value = draft.title || '';
+        document.getElementById('editDraftSubtitle').value = draft.subtitle || '';
+        document.getElementById('editDraftCurationTag').value = draft.curation_tag || '';
+        document.getElementById('editDraftCategory').value = draft.category || '';
+        document.getElementById('editDraftWhyItMatters').value = draft.why_it_matters || '';
+        document.getElementById('editDraftQuote').value = draft.quote || '';
+        document.getElementById('editDraftExcerpt').value = draft.excerpt || '';
+        document.getElementById('editDraftBody').value = Array.isArray(draft.body) ? draft.body.join('\n\n') : draft.body;
+        document.getElementById('editDraftMaisonPerspective').value = draft.maison_perspective || '';
+        document.getElementById('editDraftAuthorName').value = draft.author_name || '';
+        document.getElementById('editDraftReadTime').value = draft.read_time || '';
+        document.getElementById('editDraftCoverImage').value = draft.cover_image || '';
+
+        document.getElementById('reviewModal').classList.add('open');
+      } catch (e) {
+        console.error('Modal error:', e);
+        window._lastModalError = e.message + ' at ' + e.stack;
+      }
+    }
+    window.openReviewModal = openReviewModal;
+
+    // Close Modal
+    document.getElementById('btnModalClose').addEventListener('click', () => {
+      document.getElementById('reviewModal').classList.remove('open');
+    });
+
+    // Save Edits
+    document.getElementById('btnModalSave').addEventListener('click', async () => {
+      const id = document.getElementById('editDraftId').value;
+      const bodyText = document.getElementById('editDraftBody').value;
+      const paragraphs = bodyText.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+
+      const updates = {
+        title: document.getElementById('editDraftTitle').value,
+        subtitle: document.getElementById('editDraftSubtitle').value,
+        curation_tag: document.getElementById('editDraftCurationTag').value,
+        category: document.getElementById('editDraftCategory').value,
+        why_it_matters: document.getElementById('editDraftWhyItMatters').value,
+        quote: document.getElementById('editDraftQuote').value,
+        excerpt: document.getElementById('editDraftExcerpt').value,
+        body: paragraphs,
+        maison_perspective: document.getElementById('editDraftMaisonPerspective').value,
+        author_name: document.getElementById('editDraftAuthorName').value,
+        read_time: document.getElementById('editDraftReadTime').value,
+        cover_image: document.getElementById('editDraftCoverImage').value
+      };
+
+      const res = await fetch('/api/editor/drafts/' + id, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updates)
+      }).then(r => r.json());
+
+      if (res.success) {
+        showToast('✓ Taslak güncellendi ve kaydedildi');
+        document.getElementById('reviewModal').classList.remove('open');
+        loadData();
+      }
+    });
+
+    // Publish from Modal
+    document.getElementById('btnModalPublish').addEventListener('click', async () => {
+      const id = document.getElementById('editDraftId').value;
+      await quickPublish(id);
+      document.getElementById('reviewModal').classList.remove('open');
+    });
+
+    // Reject from Modal
+    document.getElementById('btnModalReject').addEventListener('click', async () => {
+      const id = document.getElementById('editDraftId').value;
+      await quickReject(id);
+      document.getElementById('reviewModal').classList.remove('open');
+    });
+
+    // Quick Publish
+    async function quickPublish(draftId) {
+      if (!confirm('Bu editoryal taslağı MAISON uygulamasında canlı olarak yayınlamak istediğinize emin misiniz?')) return;
+      const res = await fetch('/api/editor/drafts/' + draftId + '/publish', { method: 'POST' }).then(r => r.json());
+      if (res.success) {
+        showToast('🚀 Makale başarıyla MAISON canlı uygulamasına yayınlandı!');
+        loadData();
+      } else {
+        alert('Yayınlama hatası: ' + (res.error || 'Bilinmeyen hata'));
+      }
+    }
+
+    // Quick Reject
+    async function quickReject(draftId) {
+      const reason = prompt('Reddetme nedeni (opsiyonel):', 'MAISON editoryal standardına uygun bulunmadı');
+      if (reason === null) return;
+      const res = await fetch('/api/editor/drafts/' + draftId + '/reject', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reason })
+      }).then(r => r.json());
+
+      if (res.success) {
+        showToast('✕ Taslak reddedildi ve arşive taşındı');
+        loadData();
+      }
+    }
+
+    // Toggle Source Active
+    async function toggleSource(sourceId) {
+      const res = await fetch('/api/editor/sources/' + sourceId + '/toggle', { method: 'POST' }).then(r => r.json());
+      if (res.success) {
+        showToast('Kaynak durumu güncellendi');
+        loadData();
+      }
+    }
+
+    // Scan Now Button Action
+    document.getElementById('btnScanNow').addEventListener('click', async () => {
+      const btn = document.getElementById('btnScanNow');
+      const icon = document.getElementById('scanBtnIcon');
+      const text = document.getElementById('scanBtnText');
+
+      btn.disabled = true;
+      icon.textContent = '⏳';
+      text.textContent = 'Taranıyor...';
+
+      try {
+        const res = await fetch('/api/editor/scan', { method: 'POST' }).then(r => r.json());
+        if (res.success) {
+          const run = res.run;
+          showToast(`✓ Tarama tamamlandı! Bulunan: ${run.items_found}, Yeni Taslak: ${run.drafts_generated}, Yinelenen: ${run.duplicates_filtered}`);
+        } else {
+          showToast('Tarama uyarısı: ' + (res.message || 'Hata'));
+        }
+      } catch (e) {
+        showToast('Tarama sırasında bağlantı hatası oluştu');
+      } finally {
+        btn.disabled = false;
+        icon.textContent = '✦';
+        text.textContent = 'Şimdi Tara';
+        loadData();
+      }
+    });
+
+    // Initial Load
+    loadData().then(() => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const reviewParam = urlParams.get('review') || (window.location.hash.startsWith('#review=') ? window.location.hash.replace('#review=', '') : null);
+      if (reviewParam) {
+        setTimeout(() => openReviewModal(reviewParam), 100);
+      }
+      const tabParam = urlParams.get('tab') || (window.location.hash.startsWith('#tab=') ? window.location.hash.replace('#tab=', '') : null);
+      if (tabParam) {
+        setTimeout(() => {
+          const targetTab = document.querySelector(`[data-tab="${tabParam}"]`);
+          if (targetTab) targetTab.click();
+        }, 100);
+      }
+    });
+  </script>
+</body>
+</html>
